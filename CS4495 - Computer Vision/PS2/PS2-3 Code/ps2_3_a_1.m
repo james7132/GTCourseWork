@@ -1,0 +1,10 @@
+left = imread('http://www.cc.gatech.edu/%7Eafb/classes/CS4495-Fall2014/ProblemSets/PS2/Data/proj2-pair1-L.png');
+right = imread('http://www.cc.gatech.edu/%7Eafb/classes/CS4495-Fall2014/ProblemSets/PS2/Data/proj2-pair1-R.png');
+gLeft = rgb2gray(left);
+gRight = rgb2gray(right);
+gLeft = imnoise(gLeft, 'gaussian', 0, 0.005);
+gRight = imnoise(gRight, 'gaussian', 0, 0.005);
+imwrite(gLeft, 'left-noise.png');
+imwrite(gRight, 'right-noise.png');
+disparity_L = SumOfSquareDifferences(gLeft, gRight, 15, 70);
+disparity_R = SumOfSquareDifferences(gRight, gLeft, 15, 70);
