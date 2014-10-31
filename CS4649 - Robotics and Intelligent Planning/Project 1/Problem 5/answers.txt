@@ -1,0 +1,8 @@
+5. b) We knew that the Hanoi problem can be solved recursively, as moving larger stacks of disks was simply solving two smaller Hanoi instances,
+      with one or two more moves. Thus we could create a compound task "move" that moves recursively breaks down the task into smaller and smaller Hanoi instances
+	  that ultimately breaks down into a single disk move from one peg to another, which is left as the "move_disk" primitive task.
+   d) Both of the planners produced optimal solutions (2^n -1 total steps, where n is the number of disks). The HTN planner, pyhop, did notably better on large instances
+      Hanoi (0.293s on Hanoi-12) when compared to FF (5.4s on Hanoi-12). Both were run on the same machine.
+   e) Even with a interpreted language like python, it did notaby faster than FF, as it took full advantage of the problem structure. FF, while implemented
+      in a faster language, C, is still less informed about the problem than pyhop, which is why pyhop was faster for larger instances of Hanoi.
+      

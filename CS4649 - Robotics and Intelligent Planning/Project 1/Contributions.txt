@@ -1,0 +1,9 @@
+James: Handled creating PDDL files for problem 2 as well as creating PDDL files for problem 4.  Worked with group on problem 5.
+
+Ajmal: Wrote majority of planner for problem 3 and worked with team on problem 5.
+
+Inder: Assisted in encoding problems for use in planners, specifically sokobon problems for use with our personal planner.  Encoded 2.3 in PDDL.
+
+Sagar: Ran planners for problems 1, 2, and 4 and committed results. Wrote A* search for problem 3. Worked with team on problem 5.
+
+Richard: Focused primarily on writeup for group.  Did research to provide justification for analysis.  Worked with team on problem 5.

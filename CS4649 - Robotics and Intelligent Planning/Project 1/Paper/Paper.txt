@@ -1,0 +1,46 @@
+Question 1
+Part a: Compare the Features of the Two Planners
+
+Blackbox Planner
+	This planner operated by turning the given problem into a set of boolean 
+satisfiability problems through two mechanisms. The front end is a graphplan technique
+ where instead of state nodes and edges representing possible traversal, we have nodes of 
+actions/facts and edges from facts -> actions or from actions -> facts affected by said 
+action. Arranged in an alternating fashion: Facts, to possible actions, back to facts. 
+It also uses backward chaining and iterative depth probing to keep from exploring too 
+many extraneous nodes.
+
+VHPOP
+	VHPOP is a partial-order planner. This means it generates a lists of actions 
+necessary to get to the goal, only constraining their order when absolutely necessary 
+(One has preconditions, an earlier action must synthesize) It operates on a system of 
+clever heuristics, and evaluating dead end states.
+
+VHPOP is a versatile heuristic partial order planner loosely based on
+UCPOP with the following main features:
+
+  * Can plan with either ground or lifted actions.
+
+  * Can enforce joint parameter domain constraints when using lifted
+    actions.
+
+  * Has several different plan ranking heuristics to choose from that
+    can be combined into complex plan ranking functions.
+
+  * Efficiently implements all common flaw selection strategies,
+    including LCFR and ZLIFO, and many novel ones, and allows flaw
+    selection strategies to be specified using a concise notation.
+
+  * Several flaw selection strategies can be used simultaneously.
+
+  * Implements A*, IDA*, and hill climbing search.
+
+  * Fully supports levels 1 and 3 of PDDL+.
+
+
+Part b: Which Planner was Fastest
+	Both took very little time, as this is a relatively small problem in terms of search
+ space, but  the Blackbox planner was still undoubtedly faster at 12 milliseconds versus 
+the 5160 milliseconds of the VHPOP planner. 
+
+Part c: Why Might this Planner be Faster

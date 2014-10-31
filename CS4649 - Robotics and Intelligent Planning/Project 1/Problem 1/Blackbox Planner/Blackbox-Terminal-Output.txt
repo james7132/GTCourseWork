@@ -1,0 +1,98 @@
+command line:  ./blackbox -o ../hanoi-domain.pddl -f ../hanoi2.pddl -g result-blackbox.txt
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: ../hanoi-domain.pddl
+Loading fact file: ../hanoi2.pddl
+Problem name: hanoi-3
+Facts loaded.
+time: 1, 24 facts and 6 exclusive pairs.
+time: 2, 27 facts and 17 exclusive pairs.
+time: 3, 31 facts and 35 exclusive pairs.
+Goals reachable at 3 steps but mutually exclusive.
+time: 4, 33 facts and 42 exclusive pairs.
+Goals first reachable in 4 steps.
+297 nodes created.
+
+####################################################
+goals at time 5:
+  on_d1_d2 on_d2_d3 on_d3_p1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 2
+
+----------------------------------------------------
+Can't solve in 4 steps
+time: 5, 33 facts and 41 exclusive pairs.
+104 new nodes added.
+
+####################################################
+goals at time 6:
+  on_d1_d2 on_d2_d3 on_d3_p1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 20
+
+----------------------------------------------------
+Can't solve in 5 steps
+time: 6, 33 facts and 41 exclusive pairs.
+104 new nodes added.
+
+####################################################
+goals at time 7:
+  on_d1_d2 on_d2_d3 on_d3_p1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 70
+
+----------------------------------------------------
+Can't solve in 6 steps
+time: 7, 33 facts and 41 exclusive pairs.
+104 new nodes added.
+
+####################################################
+goals at time 8:
+  on_d1_d2 on_d2_d3 on_d3_p1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 239
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (move-disk d1 d2 p1)
+2 (move-disk d2 d3 p2)
+3 (move-disk d1 p1 d2)
+4 (move-disk d3 p3 p1)
+5 (move-disk d1 d2 p3)
+6 (move-disk d2 p2 d3)
+7 (move-disk d1 p3 d2)
+End plan
+----------------------------------------------------
+
+7 total actions in plan
+25 entries in hash table, 13 hash hits, avg set size 8
+44 total set-creation steps (entries + hits + plan length - 1)
+38 actions tried
+
+####################################################
+Total elapsed time:   0.01 seconds
+Time in milliseconds: 12
+
+####################################################
+

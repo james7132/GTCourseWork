@@ -1,0 +1,7 @@
+((move-disk d1 d2 p1)
+ (move-disk d2 d3 p2)
+ (move-disk d1 p1 d2)
+ (move-disk d3 p3 p1)
+ (move-disk d1 d2 p3)
+ (move-disk d2 p2 d3)
+ (move-disk d1 p3 d2))

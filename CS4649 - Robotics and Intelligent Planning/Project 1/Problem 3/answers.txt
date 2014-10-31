@@ -1,0 +1,55 @@
+3.1
+
+Language used: Java
+
+Machine vitals:
+2.6 GHz Intel Core i5
+16 GB 1600 MHz DDR3
+Mac OS X 10.9.4
+Java 1.7.0_67
+
+The planner is complete and always gives an optimal path.
+
+a)
+
+(a) 2.1
+Found goal in 14 steps
+Path: DOWN RIGHT RIGHT DOWN LEFT UP LEFT LEFT DOWN DOWN RIGHT UP UP UP
+Time taken: 0m 0.008695s
+No of states explored: 88
+
+(b) 2.2
+Found goal in 32 steps
+Path: UP RIGHT RIGHT DOWN UP LEFT LEFT DOWN RIGHT DOWN RIGHT LEFT UP UP RIGHT DOWN RIGHT DOWN DOWN DOWN UP LEFT UP RIGHT UP LEFT DOWN LEFT UP RIGHT UP LEFT
+Time taken: 0m 0.056724s
+No of states explored: 1067
+
+(c) 2.3
+Found goal in 89 steps
+Path: RIGHT DOWN DOWN RIGHT RIGHT UP UP LEFT LEFT RIGHT RIGHT DOWN DOWN RIGHT RIGHT UP UP UP UP UP RIGHT RIGHT DOWN DOWN DOWN LEFT RIGHT UP UP UP LEFT LEFT DOWN DOWN DOWN LEFT LEFT DOWN DOWN RIGHT RIGHT UP UP UP UP DOWN DOWN LEFT LEFT DOWN DOWN LEFT LEFT UP UP RIGHT RIGHT RIGHT LEFT DOWN DOWN RIGHT RIGHT UP UP UP DOWN DOWN DOWN LEFT LEFT LEFT LEFT LEFT LEFT UP UP RIGHT RIGHT RIGHT RIGHT RIGHT LEFT DOWN DOWN RIGHT RIGHT UP UP
+Time taken: 0m 1.074816s
+No of states explored: 8021
+
+(d) Sokoban Challenge
+Found goal in 76 steps
+Path: DOWN LEFT LEFT LEFT LEFT UP RIGHT RIGHT DOWN DOWN DOWN LEFT UP RIGHT UP UP LEFT LEFT DOWN RIGHT DOWN RIGHT RIGHT UP RIGHT UP LEFT LEFT RIGHT DOWN DOWN LEFT LEFT UP RIGHT UP RIGHT UP UP LEFT DOWN DOWN DOWN LEFT LEFT UP RIGHT DOWN RIGHT UP RIGHT RIGHT DOWN LEFT DOWN LEFT RIGHT UP UP LEFT LEFT DOWN RIGHT DOWN DOWN LEFT UP RIGHT UP UP RIGHT UP UP LEFT DOWN DOWN
+Time taken: 1m 31.956295s
+No of states explored: 47077
+
+b)
+
+...
+
+c)
+
+Our planner uses an A* search with some pruning. It is complete because the search space has every unique state except the pruned states which are probably never going to lead to the goal state (we explain why in 3 d) )
+
+d)
+
+We used A* search because it is much faster than BFS as it expands the states from the open set that are most likely to reach the goal state first before the other states. It does this with the help of a heuristic.
+
+Our heuristic (rip.hw1.planner.sokoban.SokobanHeuristic) calculates the sum of the manhattan distances between each box and its goal. As this is simply a relaxation of the problem, the heuristic is admissible and thus the algorithm always gives an optimal solution.
+
+In addition to the heuristic, we also prune the search tree that improves performance a lot, especially for the challenge problem. We make the observation that if you 'jam' one of the boxes anywhere on the map except a goal position, there is no way a solution can be found, no matter what you do. We also make the observation that a box is jammed when there is a wall or another jammed box on at least two of its adjacent sides. As we only remove states that will never lead to the goal state, the algorithm will still be complete. 
+
+The relavant methods that implement this are in rip.hw1.planner.sokoban.SokobanHeuristic. The method names are canReach, jammed and recJammed. canReach checks weather any of the boxes in the state are 'jammed'. jammed and recJammed checks weather a particular box is jammed. Because to know whether any box is jammed, you need to know whether a neighboring box is jammed, the algorithm is recursive.

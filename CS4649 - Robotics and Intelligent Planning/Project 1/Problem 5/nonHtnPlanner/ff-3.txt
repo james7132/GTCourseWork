@@ -1,0 +1,39 @@
+
+ff: parsing domain file
+domain 'HANOI-DOMAIN' defined
+ ... done.
+ff: parsing problem file
+problem 'HANOI-3' defined
+ ... done.
+
+
+
+Cueing down from goal distance:    3 into depth [1]
+                                   2            [1]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :    3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: MOVE-DISK D1 D2 P1
+        1: MOVE-DISK D2 D3 P2
+        2: MOVE-DISK D1 P1 D2
+        3: MOVE-DISK D3 P3 P1
+        4: MOVE-DISK D1 D2 P3
+        5: MOVE-DISK D2 P2 D3
+        6: MOVE-DISK D1 P3 D2
+     
+
+time spent:    0.00 seconds instantiating 48 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 18 facts and 38 actions
+               0.00 seconds creating final representation with 17 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 21 states, to a max depth of 1
+               0.00 seconds total time
+

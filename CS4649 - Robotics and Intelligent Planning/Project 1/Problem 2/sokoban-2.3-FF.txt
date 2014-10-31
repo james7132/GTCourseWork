@@ -1,0 +1,134 @@
+
+ff: parsing domain file
+domain 'SOKOBAN-DOMAIN' defined
+ ... done.
+ff: parsing problem file
+problem 'SOKOBAN-2' defined
+ ... done.
+
+
+
+Cueing down from goal distance:   18 into depth [1]
+                                  17            [1]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   18
+                          17
+                          16
+                          15
+                          13
+                          12
+                          11
+                          10
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: MOVE EAST BOT B3 C3
+        1: MOVE SOUTH BOT C3 C2
+        2: MOVE SOUTH BOT C2 C1
+        3: MOVE EAST BOT C1 D1
+        4: MOVE EAST BOT D1 E1
+        5: MOVE NORTH BOT E1 E2
+        6: MOVE NORTH BOT E2 E3
+        7: PUSH WEST BOT BLOCK3 E3 D3 C3
+        8: PUSH WEST BOT BLOCK3 D3 C3 B3
+        9: MOVE EAST BOT C3 D3
+       10: MOVE EAST BOT D3 E3
+       11: MOVE SOUTH BOT E3 E2
+       12: MOVE SOUTH BOT E2 E1
+       13: MOVE EAST BOT E1 F1
+       14: MOVE EAST BOT F1 G1
+       15: MOVE NORTH BOT G1 G2
+       16: MOVE NORTH BOT G2 G3
+       17: MOVE NORTH BOT G3 G4
+       18: MOVE NORTH BOT G4 G5
+       19: MOVE NORTH BOT G5 G6
+       20: MOVE EAST BOT G6 H6
+       21: MOVE EAST BOT H6 I6
+       22: MOVE SOUTH BOT I6 I5
+       23: MOVE SOUTH BOT I5 I4
+       24: MOVE SOUTH BOT I4 I3
+       25: PUSH WEST BOT BLOCK1 I3 H3 G3
+       26: MOVE EAST BOT H3 I3
+       27: MOVE NORTH BOT I3 I4
+       28: MOVE NORTH BOT I4 I5
+       29: MOVE NORTH BOT I5 I6
+       30: MOVE WEST BOT I6 H6
+       31: MOVE WEST BOT H6 G6
+       32: MOVE SOUTH BOT G6 G5
+       33: MOVE SOUTH BOT G5 G4
+       34: PUSH SOUTH BOT BLOCK1 G4 G3 G2
+       35: PUSH WEST BOT BLOCK2 G3 F3 E3
+       36: PUSH WEST BOT BLOCK2 F3 E3 D3
+       37: MOVE SOUTH BOT E3 E2
+       38: MOVE SOUTH BOT E2 E1
+       39: MOVE EAST BOT E1 F1
+       40: MOVE EAST BOT F1 G1
+       41: PUSH NORTH BOT BLOCK1 G1 G2 G3
+       42: PUSH NORTH BOT BLOCK1 G2 G3 G4
+       43: PUSH NORTH BOT BLOCK1 G3 G4 G5
+       44: PUSH NORTH BOT BLOCK1 G4 G5 G6
+       45: MOVE SOUTH BOT G5 G4
+       46: MOVE SOUTH BOT G4 G3
+       47: MOVE WEST BOT G3 F3
+       48: MOVE WEST BOT F3 E3
+       49: MOVE SOUTH BOT E3 E2
+       50: MOVE SOUTH BOT E2 E1
+       51: MOVE WEST BOT E1 D1
+       52: MOVE WEST BOT D1 C1
+       53: MOVE NORTH BOT C1 C2
+       54: MOVE NORTH BOT C2 C3
+       55: PUSH EAST BOT BLOCK2 C3 D3 E3
+       56: PUSH EAST BOT BLOCK2 D3 E3 F3
+       57: PUSH EAST BOT BLOCK2 E3 F3 G3
+       58: MOVE WEST BOT F3 E3
+       59: MOVE SOUTH BOT E3 E2
+       60: MOVE SOUTH BOT E2 E1
+       61: MOVE EAST BOT E1 F1
+       62: MOVE EAST BOT F1 G1
+       63: MOVE NORTH BOT G1 G2
+       64: PUSH NORTH BOT BLOCK2 G2 G3 G4
+       65: PUSH NORTH BOT BLOCK2 G3 G4 G5
+       66: MOVE SOUTH BOT G4 G3
+       67: MOVE WEST BOT G3 F3
+       68: MOVE WEST BOT F3 E3
+       69: MOVE WEST BOT E3 D3
+       70: MOVE WEST BOT D3 C3
+       71: MOVE SOUTH BOT C3 C2
+       72: MOVE SOUTH BOT C2 C1
+       73: MOVE WEST BOT C1 B1
+       74: MOVE WEST BOT B1 A1
+       75: MOVE NORTH BOT A1 A2
+       76: MOVE NORTH BOT A2 A3
+       77: PUSH EAST BOT BLOCK3 A3 B3 C3
+       78: PUSH EAST BOT BLOCK3 B3 C3 D3
+       79: PUSH EAST BOT BLOCK3 C3 D3 E3
+       80: PUSH EAST BOT BLOCK3 D3 E3 F3
+       81: PUSH EAST BOT BLOCK3 E3 F3 G3
+       82: MOVE WEST BOT F3 E3
+       83: MOVE SOUTH BOT E3 E2
+       84: MOVE SOUTH BOT E2 E1
+       85: MOVE EAST BOT E1 F1
+       86: MOVE EAST BOT F1 G1
+       87: MOVE NORTH BOT G1 G2
+       88: PUSH NORTH BOT BLOCK3 G2 G3 G4
+     
+
+time spent:    0.00 seconds instantiating 192 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 96 facts and 126 actions
+               0.00 seconds creating final representation with 96 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 707 states, to a max depth of 1
+               0.00 seconds total time
+

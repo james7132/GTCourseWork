@@ -1,0 +1,192 @@
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: sokoban-domain.pddl
+Loading fact file: sokoban-2.3.pddl
+Problem name: sokoban-2.3
+Facts loaded.
+time: 1, 94 facts and 6 exclusive pairs.
+time: 2, 98 facts and 29 exclusive pairs.
+time: 3, 101 facts and 55 exclusive pairs.
+time: 4, 103 facts and 73 exclusive pairs.
+time: 5, 104 facts and 82 exclusive pairs.
+time: 6, 106 facts and 105 exclusive pairs.
+time: 7, 108 facts and 134 exclusive pairs.
+time: 8, 112 facts and 208 exclusive pairs.
+time: 9, 115 facts and 270 exclusive pairs.
+time: 10, 120 facts and 389 exclusive pairs.
+time: 11, 122 facts and 430 exclusive pairs.
+time: 12, 123 facts and 414 exclusive pairs.
+time: 13, 126 facts and 483 exclusive pairs.
+time: 14, 129 facts and 552 exclusive pairs.
+time: 15, 133 facts and 670 exclusive pairs.
+time: 16, 136 facts and 740 exclusive pairs.
+time: 17, 139 facts and 834 exclusive pairs.
+time: 18, 140 facts and 828 exclusive pairs.
+time: 19, 140 facts and 776 exclusive pairs.
+time: 20, 140 facts and 712 exclusive pairs.
+time: 21, 144 facts and 863 exclusive pairs.
+time: 22, 146 facts and 910 exclusive pairs.
+time: 23, 148 facts and 970 exclusive pairs.
+time: 24, 149 facts and 975 exclusive pairs.
+time: 25, 150 facts and 989 exclusive pairs.
+time: 26, 151 facts and 993 exclusive pairs.
+time: 27, 153 facts and 1036 exclusive pairs.
+time: 28, 155 facts and 1068 exclusive pairs.
+time: 29, 155 facts and 1007 exclusive pairs.
+time: 30, 155 facts and 933 exclusive pairs.
+time: 31, 156 facts and 913 exclusive pairs.
+time: 32, 157 facts and 885 exclusive pairs.
+time: 33, 157 facts and 832 exclusive pairs.
+time: 34, 157 facts and 795 exclusive pairs.
+time: 35, 158 facts and 819 exclusive pairs.
+time: 36, 159 facts and 845 exclusive pairs.
+time: 37, 160 facts and 879 exclusive pairs.
+Goals reachable at 37 steps but mutually exclusive.
+time: 38, 160 facts and 860 exclusive pairs.
+Goals reachable at 38 steps but mutually exclusive.
+time: 39, 160 facts and 849 exclusive pairs.
+Goals reachable at 39 steps but mutually exclusive.
+time: 40, 160 facts and 834 exclusive pairs.
+Goals reachable at 40 steps but mutually exclusive.
+time: 41, 160 facts and 818 exclusive pairs.
+Goals reachable at 41 steps but mutually exclusive.
+time: 42, 160 facts and 803 exclusive pairs.
+Goals reachable at 42 steps but mutually exclusive.
+time: 43, 160 facts and 793 exclusive pairs.
+Goals first reachable in 43 steps.
+15772 nodes created.
+
+####################################################
+goals at time 44:
+  locatedat_block1_g6 locatedat_block2_g5 locatedat_block3_g4 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 3
+
+----------------------------------------------------
+Can't solve in 43 steps
+time: 44, 160 facts and 786 exclusive pairs.
+446 new nodes added.
+
+####################################################
+goals at time 45:
+  locatedat_block1_g6 locatedat_block2_g5 locatedat_block3_g4 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 9
+
+----------------------------------------------------
+Can't solve in 44 steps
+time: 45, 160 facts and 780 exclusive pairs.
+446 new nodes added.
+
+####################################################
+goals at time 46:
+  locatedat_block1_g6 locatedat_block2_g5 locatedat_block3_g4 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 62
+
+----------------------------------------------------
+Can't solve in 45 steps
+time: 46, 160 facts and 778 exclusive pairs.
+446 new nodes added.
+
+####################################################
+goals at time 47:
+  locatedat_block1_g6 locatedat_block2_g5 locatedat_block3_g4 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 78
+
+----------------------------------------------------
+Can't solve in 46 steps
+time: 47, 160 facts and 777 exclusive pairs.
+446 new nodes added.
+
+####################################################
+goals at time 48:
+  locatedat_block1_g6 locatedat_block2_g5 locatedat_block3_g4 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 272
+
+----------------------------------------------------
+Can't solve in 47 steps
+time: 48, 160 facts and 777 exclusive pairs.
+446 new nodes added.
+
+####################################################
+goals at time 49:
+  locatedat_block1_g6 locatedat_block2_g5 locatedat_block3_g4 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 338
+
+----------------------------------------------------
+Can't solve in 48 steps
+time: 49, 160 facts and 777 exclusive pairs.
+446 new nodes added.
+
+####################################################
+goals at time 50:
+  locatedat_block1_g6 locatedat_block2_g5 locatedat_block3_g4 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 1072
+
+----------------------------------------------------
+Can't solve in 49 steps
+time: 50, 160 facts and 777 exclusive pairs.
+446 new nodes added.
+
+####################################################
+goals at time 51:
+  locatedat_block1_g6 locatedat_block2_g5 locatedat_block3_g4 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 1328
+
+----------------------------------------------------
+Can't solve in 50 steps
+
+----------------------------------------------------
+NO SOLUTION
+Problem not solvable: no solution exists in alloted time
+    Search halted after 50 steps
+    156 entries in hash table and 105 hits
+    avg set size 14
+----------------------------------------------------
+
+####################################################
+Total elapsed time:   4.88 seconds
+Time in milliseconds: 4883
+
+####################################################
+

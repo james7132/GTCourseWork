@@ -1,0 +1,71 @@
+
+ff: parsing domain file
+domain 'SOKOBAN-DOMAIN' defined
+ ... done.
+ff: parsing problem file
+problem 'SOKOBAN-2' defined
+ ... done.
+
+
+
+Cueing down from goal distance:   13 into depth [1][2]
+                                  11            [1][2][3][4][5][6][7][8][9][10][11][12][13][14][15][16][17][18][19][20][21][22][23]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   13
+                          11
+                          10
+                           9
+                           8
+                           7
+                           5
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: MOVE NORTH BOT A5 A6
+        1: MOVE EAST BOT A6 B6
+        2: MOVE EAST BOT B6 C6
+        3: PUSH SOUTH BOT BLOCKB C6 C5 C4
+        4: MOVE NORTH BOT C5 C6
+        5: MOVE WEST BOT C6 B6
+        6: MOVE WEST BOT B6 A6
+        7: MOVE SOUTH BOT A6 A5
+        8: PUSH EAST BOT BLOCKA A5 B5 C5
+        9: MOVE SOUTH BOT B5 B4
+       10: PUSH EAST BOT BLOCKB B4 C4 D4
+       11: MOVE WEST BOT C4 B4
+       12: MOVE NORTH BOT B4 B5
+       13: MOVE NORTH BOT B5 B6
+       14: MOVE EAST BOT B6 C6
+       15: PUSH SOUTH BOT BLOCKA C6 C5 C4
+       16: MOVE EAST BOT C5 D5
+       17: PUSH SOUTH BOT BLOCKB D5 D4 D3
+       18: PUSH SOUTH BOT BLOCKB D4 D3 D2
+       19: PUSH SOUTH BOT BLOCKB D3 D2 D1
+       20: MOVE NORTH BOT D2 D3
+       21: MOVE WEST BOT D3 C3
+       22: PUSH NORTH BOT BLOCKA C3 C4 C5
+       23: MOVE EAST BOT C4 D4
+       24: MOVE NORTH BOT D4 D5
+       25: PUSH WEST BOT BLOCKA D5 C5 B5
+       26: MOVE SOUTH BOT C5 C4
+       27: MOVE WEST BOT C4 B4
+       28: PUSH NORTH BOT BLOCKA B4 B5 B6
+       29: MOVE EAST BOT B5 C5
+       30: MOVE NORTH BOT C5 C6
+       31: PUSH WEST BOT BLOCKA C6 B6 A6
+     
+
+time spent:    0.00 seconds instantiating 76 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 56 facts and 76 actions
+               0.00 seconds creating final representation with 56 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 146 states, to a max depth of 23
+               0.00 seconds total time
+

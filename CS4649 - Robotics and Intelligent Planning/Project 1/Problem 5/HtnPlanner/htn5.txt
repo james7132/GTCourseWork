@@ -1,0 +1,9 @@
+** pyhop, verbose=1: **
+   state = hanoi-state
+   tasks = [('move', 4, 1, 3, 2)]
+** result = [('move_disk', 0, 1, 3), ('move_disk', 1, 1, 2), ('move_disk', 0, 3, 2), ('move_disk', 2, 1, 3), ('move_disk', 0, 2, 1), ('move_disk', 1, 2, 3), ('move_disk', 0, 1, 3), ('move_disk', 3, 1, 2), ('move_disk', 0, 3, 2), ('move_disk', 1, 3, 1), ('move_disk', 0, 2, 1), ('move_disk', 2, 3, 2), ('move_disk', 0, 1, 3), ('move_disk', 1, 1, 2), ('move_disk', 0, 3, 2), ('move_disk', 4, 1, 3), ('move_disk', 0, 2, 1), ('move_disk', 1, 2, 3), ('move_disk', 0, 1, 3), ('move_disk', 2, 2, 1), ('move_disk', 0, 3, 2), ('move_disk', 1, 3, 1), ('move_disk', 0, 2, 1), ('move_disk', 3, 2, 3), ('move_disk', 0, 1, 3), ('move_disk', 1, 1, 2), ('move_disk', 0, 3, 2), ('move_disk', 2, 1, 3), ('move_disk', 0, 2, 1), ('move_disk', 1, 2, 3), ('move_disk', 0, 1, 3)] 
+
+** solution length =  31 
+
+** used time =  0.000876188278198 seconds
+

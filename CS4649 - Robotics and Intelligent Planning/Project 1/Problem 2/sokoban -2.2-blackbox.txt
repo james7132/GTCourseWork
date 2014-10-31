@@ -1,0 +1,331 @@
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: sokoban-domain.pddl
+Loading fact file: sokoban-2.2.pddl
+Problem name: sokoban-2.2
+Facts loaded.
+time: 1, 55 facts and 4 exclusive pairs.
+time: 2, 56 facts and 6 exclusive pairs.
+time: 3, 59 facts and 22 exclusive pairs.
+time: 4, 63 facts and 50 exclusive pairs.
+time: 5, 68 facts and 93 exclusive pairs.
+time: 6, 71 facts and 116 exclusive pairs.
+time: 7, 76 facts and 194 exclusive pairs.
+time: 8, 79 facts and 237 exclusive pairs.
+time: 9, 80 facts and 225 exclusive pairs.
+time: 10, 85 facts and 329 exclusive pairs.
+time: 11, 88 facts and 387 exclusive pairs.
+time: 12, 89 facts and 376 exclusive pairs.
+Goals reachable at 12 steps but mutually exclusive.
+time: 13, 91 facts and 411 exclusive pairs.
+Goals reachable at 13 steps but mutually exclusive.
+time: 14, 91 facts and 377 exclusive pairs.
+Goals reachable at 14 steps but mutually exclusive.
+time: 15, 91 facts and 353 exclusive pairs.
+Goals reachable at 15 steps but mutually exclusive.
+time: 16, 93 facts and 415 exclusive pairs.
+Goals first reachable in 16 steps.
+3180 nodes created.
+
+####################################################
+goals at time 17:
+  locatedat_blocka_a6 locatedat_blockb_d1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 151
+
+----------------------------------------------------
+Can't solve in 16 steps
+time: 17, 94 facts and 440 exclusive pairs.
+261 new nodes added.
+
+####################################################
+goals at time 18:
+  locatedat_blocka_a6 locatedat_blockb_d1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 333
+
+----------------------------------------------------
+Can't solve in 17 steps
+time: 18, 95 facts and 468 exclusive pairs.
+265 new nodes added.
+
+####################################################
+goals at time 19:
+  locatedat_blocka_a6 locatedat_blockb_d1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 3234
+
+----------------------------------------------------
+Can't solve in 18 steps
+time: 19, 95 facts and 458 exclusive pairs.
+266 new nodes added.
+
+####################################################
+goals at time 20:
+  locatedat_blocka_a6 locatedat_blockb_d1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 6014
+
+----------------------------------------------------
+Can't solve in 19 steps
+time: 20, 95 facts and 450 exclusive pairs.
+266 new nodes added.
+
+####################################################
+goals at time 21:
+  locatedat_blocka_a6 locatedat_blockb_d1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 38098
+
+----------------------------------------------------
+Can't solve in 20 steps
+time: 21, 95 facts and 444 exclusive pairs.
+266 new nodes added.
+
+####################################################
+goals at time 22:
+  locatedat_blocka_a6 locatedat_blockb_d1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 64801
+
+----------------------------------------------------
+Can't solve in 21 steps
+time: 22, 95 facts and 439 exclusive pairs.
+266 new nodes added.
+
+####################################################
+goals at time 23:
+  locatedat_blocka_a6 locatedat_blockb_d1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 310030
+
+----------------------------------------------------
+Can't solve in 22 steps
+time: 23, 95 facts and 435 exclusive pairs.
+266 new nodes added.
+
+####################################################
+goals at time 24:
+  locatedat_blocka_a6 locatedat_blockb_d1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 492699
+
+----------------------------------------------------
+Can't solve in 23 steps
+time: 24, 95 facts and 433 exclusive pairs.
+266 new nodes added.
+
+####################################################
+goals at time 25:
+  locatedat_blocka_a6 locatedat_blockb_d1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 1885528
+
+----------------------------------------------------
+Can't solve in 24 steps
+time: 25, 95 facts and 432 exclusive pairs.
+266 new nodes added.
+
+####################################################
+goals at time 26:
+  locatedat_blocka_a6 locatedat_blockb_d1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 2832243
+
+----------------------------------------------------
+Can't solve in 25 steps
+time: 26, 95 facts and 432 exclusive pairs.
+266 new nodes added.
+
+####################################################
+goals at time 27:
+  locatedat_blocka_a6 locatedat_blockb_d1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 8990111
+
+----------------------------------------------------
+Can't solve in 26 steps
+time: 27, 95 facts and 432 exclusive pairs.
+266 new nodes added.
+
+####################################################
+goals at time 28:
+  locatedat_blocka_a6 locatedat_blockb_d1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 12863622
+
+----------------------------------------------------
+Can't solve in 27 steps
+time: 28, 95 facts and 432 exclusive pairs.
+266 new nodes added.
+
+####################################################
+goals at time 29:
+  locatedat_blocka_a6 locatedat_blockb_d1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 34712402
+
+----------------------------------------------------
+Can't solve in 28 steps
+time: 29, 95 facts and 432 exclusive pairs.
+266 new nodes added.
+
+####################################################
+goals at time 30:
+  locatedat_blocka_a6 locatedat_blockb_d1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 47577012
+
+----------------------------------------------------
+Can't solve in 29 steps
+time: 30, 95 facts and 432 exclusive pairs.
+266 new nodes added.
+
+####################################################
+goals at time 31:
+  locatedat_blocka_a6 locatedat_blockb_d1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 111092368
+
+----------------------------------------------------
+Can't solve in 30 steps
+time: 31, 95 facts and 432 exclusive pairs.
+266 new nodes added.
+
+####################################################
+goals at time 32:
+  locatedat_blocka_a6 locatedat_blockb_d1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 146426254
+
+----------------------------------------------------
+Can't solve in 31 steps
+time: 32, 95 facts and 432 exclusive pairs.
+266 new nodes added.
+
+####################################################
+goals at time 33:
+  locatedat_blocka_a6 locatedat_blockb_d1 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 2714863
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (move north bot a5 a6)
+2 (move east bot a6 b6)
+3 (move east bot b6 c6)
+4 (push south bot blockb c6 c5 c4)
+5 (move north bot c5 c6)
+6 (move west bot c6 b6)
+7 (move west bot b6 a6)
+8 (move south bot a6 a5)
+9 (push east bot blocka a5 b5 c5)
+10 (move south bot b5 b4)
+11 (push east bot blockb b4 c4 d4)
+12 (move west bot c4 b4)
+13 (move north bot b4 b5)
+14 (move north bot b5 b6)
+15 (move east bot b6 c6)
+16 (push south bot blocka c6 c5 c4)
+17 (move east bot c5 d5)
+18 (push south bot blockb d5 d4 d3)
+19 (push south bot blockb d4 d3 d2)
+20 (push south bot blockb d3 d2 d1)
+21 (move north bot d2 d3)
+22 (move west bot d3 c3)
+23 (push north bot blocka c3 c4 c5)
+24 (move east bot c4 d4)
+25 (move north bot d4 d5)
+26 (push west bot blocka d5 c5 b5)
+27 (move south bot c5 c4)
+28 (move west bot c4 b4)
+29 (push north bot blocka b4 b5 b6)
+30 (move east bot b5 c5)
+31 (move north bot c5 c6)
+32 (push west bot blocka c6 b6 a6)
+End plan
+----------------------------------------------------
+
+32 total actions in plan
+7315845 entries in hash table, 9010419 hash hits, avg set size 31
+16326295 total set-creation steps (entries + hits + plan length - 1)
+12296222 actions tried
+
+####################################################
+Total elapsed time:   12 minutes, 9 seconds
+Time in milliseconds: 729464
+
+####################################################
+

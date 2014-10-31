@@ -1,0 +1,67 @@
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: sokoban-domain.pddl
+Loading fact file: sokoban-2.1.pddl
+Problem name: sokoban-2.1
+Facts loaded.
+time: 1, 50 facts and 6 exclusive pairs.
+time: 2, 54 facts and 28 exclusive pairs.
+time: 3, 59 facts and 79 exclusive pairs.
+time: 4, 62 facts and 117 exclusive pairs.
+time: 5, 63 facts and 124 exclusive pairs.
+time: 6, 64 facts and 130 exclusive pairs.
+time: 7, 64 facts and 122 exclusive pairs.
+time: 8, 65 facts and 131 exclusive pairs.
+time: 9, 67 facts and 162 exclusive pairs.
+time: 10, 67 facts and 148 exclusive pairs.
+time: 11, 67 facts and 139 exclusive pairs.
+time: 12, 68 facts and 153 exclusive pairs.
+time: 13, 69 facts and 167 exclusive pairs.
+time: 14, 70 facts and 180 exclusive pairs.
+Goals first reachable in 14 steps.
+2258 nodes created.
+
+####################################################
+goals at time 15:
+  locatedat_block1_b5 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 250
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (move south bot b4 b3)
+2 (move east bot b3 c3)
+3 (move east bot c3 d3)
+4 (move south bot d3 d2)
+5 (push west bot block1 d2 c2 b2)
+6 (move north bot c2 c3)
+7 (move west bot c3 b3)
+8 (move west bot b3 a3)
+9 (move south bot a3 a2)
+10 (move south bot a2 a1)
+11 (move east bot a1 b1)
+12 (push north bot block1 b1 b2 b3)
+13 (push north bot block1 b2 b3 b4)
+14 (push north bot block1 b3 b4 b5)
+End plan
+----------------------------------------------------
+
+14 total actions in plan
+0 entries in hash table, 
+13 total set-creation steps (entries + hits + plan length - 1)
+14 actions tried
+
+####################################################
+Total elapsed time:   0.05 seconds
+Time in milliseconds: 48
+
+####################################################
+

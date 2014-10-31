@@ -1,0 +1,293 @@
+
+ff: parsing domain file
+domain 'HANOI-DOMAIN' defined
+ ... done.
+ff: parsing problem file
+problem 'HANOI-8' defined
+ ... done.
+
+
+
+Cueing down from goal distance:    8 into depth [1]
+                                   7            [1][2][3][4]
+                                   6            [1]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :    8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: MOVE-DISK D1 D2 P2
+        1: MOVE-DISK D2 D3 P1
+        2: MOVE-DISK D1 P2 D2
+        3: MOVE-DISK D3 D4 P2
+        4: MOVE-DISK D1 D2 D4
+        5: MOVE-DISK D2 P1 D3
+        6: MOVE-DISK D1 D4 D2
+        7: MOVE-DISK D4 D5 P1
+        8: MOVE-DISK D1 D2 D4
+        9: MOVE-DISK D2 D3 D5
+       10: MOVE-DISK D1 D4 D2
+       11: MOVE-DISK D3 P2 D4
+       12: MOVE-DISK D1 D2 P2
+       13: MOVE-DISK D2 D5 D3
+       14: MOVE-DISK D1 P2 D2
+       15: MOVE-DISK D5 D6 P2
+       16: MOVE-DISK D1 D2 D6
+       17: MOVE-DISK D2 D3 D5
+       18: MOVE-DISK D1 D6 D2
+       19: MOVE-DISK D3 D4 D6
+       20: MOVE-DISK D1 D2 D4
+       21: MOVE-DISK D2 D5 D3
+       22: MOVE-DISK D1 D4 D2
+       23: MOVE-DISK D4 P1 D5
+       24: MOVE-DISK D1 D2 D4
+       25: MOVE-DISK D2 D3 P1
+       26: MOVE-DISK D1 D4 D2
+       27: MOVE-DISK D3 D6 D4
+       28: MOVE-DISK D1 D2 D6
+       29: MOVE-DISK D2 P1 D3
+       30: MOVE-DISK D1 D6 D2
+       31: MOVE-DISK D6 D7 P1
+       32: MOVE-DISK D1 D2 D6
+       33: MOVE-DISK D2 D3 D7
+       34: MOVE-DISK D1 D6 D2
+       35: MOVE-DISK D3 D4 D6
+       36: MOVE-DISK D1 D2 D4
+       37: MOVE-DISK D2 D7 D3
+       38: MOVE-DISK D1 D4 D2
+       39: MOVE-DISK D4 D5 D7
+       40: MOVE-DISK D1 D2 D4
+       41: MOVE-DISK D2 D3 D5
+       42: MOVE-DISK D1 D4 D2
+       43: MOVE-DISK D3 D6 D4
+       44: MOVE-DISK D1 D2 D6
+       45: MOVE-DISK D2 D5 D3
+       46: MOVE-DISK D1 D6 D2
+       47: MOVE-DISK D5 P2 D6
+       48: MOVE-DISK D1 D2 P2
+       49: MOVE-DISK D2 D3 D5
+       50: MOVE-DISK D1 P2 D2
+       51: MOVE-DISK D3 D4 P2
+       52: MOVE-DISK D1 D2 D4
+       53: MOVE-DISK D2 D5 D3
+       54: MOVE-DISK D1 D4 D2
+       55: MOVE-DISK D4 D7 D5
+       56: MOVE-DISK D1 D2 D4
+       57: MOVE-DISK D2 D3 D7
+       58: MOVE-DISK D1 D4 D2
+       59: MOVE-DISK D3 P2 D4
+       60: MOVE-DISK D1 D2 P2
+       61: MOVE-DISK D2 D7 D3
+       62: MOVE-DISK D1 P2 D2
+       63: MOVE-DISK D7 D8 P2
+       64: MOVE-DISK D1 D2 D8
+       65: MOVE-DISK D2 D3 D7
+       66: MOVE-DISK D1 D8 D2
+       67: MOVE-DISK D3 D4 D8
+       68: MOVE-DISK D1 D2 D4
+       69: MOVE-DISK D2 D7 D3
+       70: MOVE-DISK D1 D4 D2
+       71: MOVE-DISK D4 D5 D7
+       72: MOVE-DISK D1 D2 D4
+       73: MOVE-DISK D2 D3 D5
+       74: MOVE-DISK D1 D4 D2
+       75: MOVE-DISK D3 D8 D4
+       76: MOVE-DISK D1 D2 D8
+       77: MOVE-DISK D2 D5 D3
+       78: MOVE-DISK D1 D8 D2
+       79: MOVE-DISK D5 D6 D8
+       80: MOVE-DISK D1 D2 D6
+       81: MOVE-DISK D2 D3 D5
+       82: MOVE-DISK D1 D6 D2
+       83: MOVE-DISK D3 D4 D6
+       84: MOVE-DISK D1 D2 D4
+       85: MOVE-DISK D2 D5 D3
+       86: MOVE-DISK D1 D4 D2
+       87: MOVE-DISK D4 D7 D5
+       88: MOVE-DISK D1 D2 D4
+       89: MOVE-DISK D2 D3 D7
+       90: MOVE-DISK D1 D4 D2
+       91: MOVE-DISK D3 D6 D4
+       92: MOVE-DISK D1 D2 D6
+       93: MOVE-DISK D2 D7 D3
+       94: MOVE-DISK D1 D6 D2
+       95: MOVE-DISK D6 P1 D7
+       96: MOVE-DISK D1 D2 D6
+       97: MOVE-DISK D2 D3 P1
+       98: MOVE-DISK D1 D6 D2
+       99: MOVE-DISK D3 D4 D6
+      100: MOVE-DISK D1 D2 D4
+      101: MOVE-DISK D2 P1 D3
+      102: MOVE-DISK D1 D4 D2
+      103: MOVE-DISK D4 D5 P1
+      104: MOVE-DISK D1 D2 D4
+      105: MOVE-DISK D2 D3 D5
+      106: MOVE-DISK D1 D4 D2
+      107: MOVE-DISK D3 D6 D4
+      108: MOVE-DISK D1 D2 D6
+      109: MOVE-DISK D2 D5 D3
+      110: MOVE-DISK D1 D6 D2
+      111: MOVE-DISK D5 D8 D6
+      112: MOVE-DISK D1 D2 D8
+      113: MOVE-DISK D2 D3 D5
+      114: MOVE-DISK D1 D8 D2
+      115: MOVE-DISK D3 D4 D8
+      116: MOVE-DISK D1 D2 D4
+      117: MOVE-DISK D2 D5 D3
+      118: MOVE-DISK D1 D4 D2
+      119: MOVE-DISK D4 P1 D5
+      120: MOVE-DISK D1 D2 D4
+      121: MOVE-DISK D2 D3 P1
+      122: MOVE-DISK D1 D4 D2
+      123: MOVE-DISK D3 D8 D4
+      124: MOVE-DISK D1 D2 D8
+      125: MOVE-DISK D2 P1 D3
+      126: MOVE-DISK D1 D8 D2
+      127: MOVE-DISK D8 P3 P1
+      128: MOVE-DISK D1 D2 D8
+      129: MOVE-DISK D2 D3 P3
+      130: MOVE-DISK D1 D8 D2
+      131: MOVE-DISK D3 D4 D8
+      132: MOVE-DISK D1 D2 D4
+      133: MOVE-DISK D2 P3 D3
+      134: MOVE-DISK D1 D4 D2
+      135: MOVE-DISK D4 D5 P3
+      136: MOVE-DISK D1 D2 D4
+      137: MOVE-DISK D2 D3 D5
+      138: MOVE-DISK D1 D4 D2
+      139: MOVE-DISK D3 D8 D4
+      140: MOVE-DISK D1 D2 D8
+      141: MOVE-DISK D2 D5 D3
+      142: MOVE-DISK D1 D8 D2
+      143: MOVE-DISK D5 D6 D8
+      144: MOVE-DISK D1 D2 D6
+      145: MOVE-DISK D2 D3 D5
+      146: MOVE-DISK D1 D6 D2
+      147: MOVE-DISK D3 D4 D6
+      148: MOVE-DISK D1 D2 D4
+      149: MOVE-DISK D2 D5 D3
+      150: MOVE-DISK D1 D4 D2
+      151: MOVE-DISK D4 P3 D5
+      152: MOVE-DISK D1 D2 D4
+      153: MOVE-DISK D2 D3 P3
+      154: MOVE-DISK D1 D4 D2
+      155: MOVE-DISK D3 D6 D4
+      156: MOVE-DISK D1 D2 D6
+      157: MOVE-DISK D2 P3 D3
+      158: MOVE-DISK D1 D6 D2
+      159: MOVE-DISK D6 D7 P3
+      160: MOVE-DISK D1 D2 D6
+      161: MOVE-DISK D2 D3 D7
+      162: MOVE-DISK D1 D6 D2
+      163: MOVE-DISK D3 D4 D6
+      164: MOVE-DISK D1 D2 D4
+      165: MOVE-DISK D2 D7 D3
+      166: MOVE-DISK D1 D4 D2
+      167: MOVE-DISK D4 D5 D7
+      168: MOVE-DISK D1 D2 D4
+      169: MOVE-DISK D2 D3 D5
+      170: MOVE-DISK D1 D4 D2
+      171: MOVE-DISK D3 D6 D4
+      172: MOVE-DISK D1 D2 D6
+      173: MOVE-DISK D2 D5 D3
+      174: MOVE-DISK D1 D6 D2
+      175: MOVE-DISK D5 D8 D6
+      176: MOVE-DISK D1 D2 D8
+      177: MOVE-DISK D2 D3 D5
+      178: MOVE-DISK D1 D8 D2
+      179: MOVE-DISK D3 D4 D8
+      180: MOVE-DISK D1 D2 D4
+      181: MOVE-DISK D2 D5 D3
+      182: MOVE-DISK D1 D4 D2
+      183: MOVE-DISK D4 D7 D5
+      184: MOVE-DISK D1 D2 D4
+      185: MOVE-DISK D2 D3 D7
+      186: MOVE-DISK D1 D4 D2
+      187: MOVE-DISK D3 D8 D4
+      188: MOVE-DISK D1 D2 D8
+      189: MOVE-DISK D2 D7 D3
+      190: MOVE-DISK D1 D8 D2
+      191: MOVE-DISK D7 P2 D8
+      192: MOVE-DISK D1 D2 P2
+      193: MOVE-DISK D2 D3 D7
+      194: MOVE-DISK D1 P2 D2
+      195: MOVE-DISK D3 D4 P2
+      196: MOVE-DISK D1 D2 D4
+      197: MOVE-DISK D2 D7 D3
+      198: MOVE-DISK D1 D4 D2
+      199: MOVE-DISK D4 D5 D7
+      200: MOVE-DISK D1 D2 D4
+      201: MOVE-DISK D2 D3 D5
+      202: MOVE-DISK D1 D4 D2
+      203: MOVE-DISK D3 P2 D4
+      204: MOVE-DISK D1 D2 P2
+      205: MOVE-DISK D2 D5 D3
+      206: MOVE-DISK D1 P2 D2
+      207: MOVE-DISK D5 D6 P2
+      208: MOVE-DISK D1 D2 D6
+      209: MOVE-DISK D2 D3 D5
+      210: MOVE-DISK D1 D6 D2
+      211: MOVE-DISK D3 D4 D6
+      212: MOVE-DISK D1 D2 D4
+      213: MOVE-DISK D2 D5 D3
+      214: MOVE-DISK D1 D4 D2
+      215: MOVE-DISK D4 D7 D5
+      216: MOVE-DISK D1 D2 D4
+      217: MOVE-DISK D2 D3 D7
+      218: MOVE-DISK D1 D4 D2
+      219: MOVE-DISK D3 D6 D4
+      220: MOVE-DISK D1 D2 D6
+      221: MOVE-DISK D2 D7 D3
+      222: MOVE-DISK D1 D6 D2
+      223: MOVE-DISK D6 P3 D7
+      224: MOVE-DISK D1 D2 D6
+      225: MOVE-DISK D2 D3 P3
+      226: MOVE-DISK D1 D6 D2
+      227: MOVE-DISK D3 D4 D6
+      228: MOVE-DISK D1 D2 D4
+      229: MOVE-DISK D2 P3 D3
+      230: MOVE-DISK D1 D4 D2
+      231: MOVE-DISK D4 D5 P3
+      232: MOVE-DISK D1 D2 D4
+      233: MOVE-DISK D2 D3 D5
+      234: MOVE-DISK D1 D4 D2
+      235: MOVE-DISK D3 D6 D4
+      236: MOVE-DISK D1 D2 D6
+      237: MOVE-DISK D2 D5 D3
+      238: MOVE-DISK D1 D6 D2
+      239: MOVE-DISK D5 P2 D6
+      240: MOVE-DISK D1 D2 P2
+      241: MOVE-DISK D2 D3 D5
+      242: MOVE-DISK D1 P2 D2
+      243: MOVE-DISK D3 D4 P2
+      244: MOVE-DISK D1 D2 D4
+      245: MOVE-DISK D2 D5 D3
+      246: MOVE-DISK D1 D4 D2
+      247: MOVE-DISK D4 P3 D5
+      248: MOVE-DISK D1 D2 D4
+      249: MOVE-DISK D2 D3 P3
+      250: MOVE-DISK D1 D4 D2
+      251: MOVE-DISK D3 P2 D4
+      252: MOVE-DISK D1 D2 P2
+      253: MOVE-DISK D2 P3 D3
+      254: MOVE-DISK D1 P2 D2
+     
+
+time spent:    0.00 seconds instantiating 468 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 63 facts and 328 actions
+               0.00 seconds creating final representation with 62 relevant facts
+               0.00 seconds building connectivity graph
+               0.03 seconds searching, evaluating 2643 states, to a max depth of 4
+               0.03 seconds total time
+
