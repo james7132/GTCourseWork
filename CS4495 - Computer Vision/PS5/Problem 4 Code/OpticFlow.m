@@ -12,7 +12,7 @@ function [ U, V ] = OpticFlow( im1, im2, blurSize, blurSigma, windowSize, window
 
     I_x = imfilter(im1, [-1 1]);
     I_y = imfilter(im1, [-1 1]');
-    I_t  = im2 - im1;
+    I_t  = im1 - im2;
 
     I_xx = imfilter(I_x .^ 2, sumFilter);
     I_yy = imfilter(I_y .^ 2, sumFilter);
@@ -27,10 +27,12 @@ function [ U, V ] = OpticFlow( im1, im2, blurSize, blurSigma, windowSize, window
             A = [I_xx(i,j), I_xy(i,j); I_xy(i,j), I_yy(i,j)];
             B = [I_xt(i,j); I_yt(i,j)];
             
-            if abs(det(A)) < 1e-20
-                U(i, j) = 0;
-                V(i, j) = 0;
+            %[Vect, Diag] = eig(A);
+            if det(A) < 1e-20 %|| Diag(2,2) <= Diag(1,1) / 10.0
+                U(i,j) = 0;
+                V(i,j) = 0;
             else
+                %x = (B'*Vect(:,1))*Vect(:,1)./ Diag(1,1);
                 x = A\B;
                 U(i,j) = x(1);
                 V(i,j) = x(2);

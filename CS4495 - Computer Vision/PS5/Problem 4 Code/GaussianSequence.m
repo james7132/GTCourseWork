@@ -1,8 +1,8 @@
-function [ pyramids ] = GaussianSequence( ims, height )
+function [ pyramids ] = GaussianSequence( ims )
     len = length(ims);
-    pyramids = cell(len, height + 1);
+    pyramids = {};
     for i = 1 : len
-        pyramids{i, :} = GaussianPyramids(ims{i}, height);
+        pyramids = [pyramids; GaussianPyramid(ims{i})];
     end
 end
 

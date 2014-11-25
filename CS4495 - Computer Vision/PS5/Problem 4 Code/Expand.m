@@ -2,28 +2,11 @@ function [ expanded ] = Expand( image, r, c)
     expandFilter = [1/8; 1/2; 3/4; 1/2; 1/8] * [1/8, 1/2, 3/4, 1/2, 1/8];
     current = im2double(image);
     [size_r, size_c] = size(current);
-    if size_r > 1
-        new = zeros(2 * size_r, size_c);
-        new(1,:) = current(1,:);
-        for i = 2 : size_r
-            new(2 * i, :) = current(i, :);
-        end
-        current = new;
-    end
-    [size_r, size_c] = size(current);
-    if size_c > 1
-        new = zeros(size_r, 2 * size_c);
-        new(:,1) = current(:,1);
-        for i = 2 : size_c
-            new(:, 2 * i) =  current(:, i);
-        end
-        current = new;
-    end
-    current = imfilter(current, expandFilter);
+    expanded = zeros(2 * size_r, 2 * size_c);
+    expanded(1 : 2 : 2 * size_r, 1 : 2 : 2 * size_c) = current;
+    expanded = imfilter(expanded, expandFilter);
     if nargin > 1
-        expanded = current(1 : r, 1 : c);
-    else
-        expanded = current;
+        expanded = expanded(1 : r, 1 : c);
     end
 end
 
