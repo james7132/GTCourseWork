@@ -1,0 +1,6 @@
+recursiveBacktracking
+assignment csps/csp7A.assignment
+csp csps/csp7imp.csp
+function leastConstrainingValuesHeuristic
+function minimumRemainingValuesHeuristic
+function noInferences

@@ -1,0 +1,6 @@
+solve
+csp csps/csp7A.csp
+function orderValues
+function minimumRemainingValuesHeuristic
+function noInferences
+boolean False

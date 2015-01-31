@@ -1,0 +1,4 @@
+minimumRemainingValuesHeuristic
+assignment csps/cspXC.assignment
+csp csps/cspX.csp
+hint Failing when different numbers of values remaining

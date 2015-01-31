@@ -1,0 +1,6 @@
+consistent
+assignment csps/csp7B.assignment
+csp csps/csp7.csp
+variable D
+value R
+hint If your answer matches the expected answer it may still be incorrect if your function changed the assignment.

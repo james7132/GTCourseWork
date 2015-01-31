@@ -1,0 +1,3 @@
+RGset = set(['R', 'G'])
+correct = {'A': set(['B']), 'B': RGset, 'C': RGset, 'D': RGset, 'E': set(['B']), 'F': RGset, 'G': RGset}
+success = (result.varDomains == correct)

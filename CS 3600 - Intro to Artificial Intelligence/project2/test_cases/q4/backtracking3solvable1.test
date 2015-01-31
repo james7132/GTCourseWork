@@ -1,0 +1,6 @@
+solve
+csp csps/csp7.csp
+function leastConstrainingValuesHeuristic
+function minimumRemainingValuesHeuristic
+function forwardChecking
+boolean False

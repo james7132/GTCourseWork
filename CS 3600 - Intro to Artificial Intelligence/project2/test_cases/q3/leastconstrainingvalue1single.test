@@ -1,0 +1,5 @@
+leastConstrainingValuesHeuristic
+assignment csps/cspT.assignment
+csp csps/cspT.csp
+variable T
+hint Failing on the one variable case, order does not matter in this test

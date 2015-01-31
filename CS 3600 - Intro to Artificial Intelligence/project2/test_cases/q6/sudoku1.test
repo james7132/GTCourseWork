@@ -1,0 +1,6 @@
+solve
+csp csps/sudoku1.csp
+function leastConstrainingValuesHeuristic
+function minimumRemainingValuesHeuristic
+function maintainArcConsistency
+boolean True

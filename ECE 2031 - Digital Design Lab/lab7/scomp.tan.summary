@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.503 ns
+From           : RESETN
+To             : AC[14]
+From Clock     : --
+To Clock       : CLOCK
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.142 ns
+From           : altsyncram:MEMORY|altsyncram_o6t3:auto_generated|ram_block1a12~porta_address_reg9
+To             : MDR_OUT[12]
+From Clock     : CLOCK
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -0.363 ns
+From           : RESETN
+To             : MW
+From Clock     : --
+To Clock       : CLOCK
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLOCK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 76.58 MHz ( period = 13.058 ns )
+From           : altsyncram:MEMORY|altsyncram_o6t3:auto_generated|ram_block1a0~porta_address_reg9
+To             : AC[15]
+From Clock     : CLOCK
+To Clock       : CLOCK
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

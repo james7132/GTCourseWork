@@ -1,0 +1,3 @@
+correct = set([('A', 'B'), ('B', 'B'), ('C', 'B'), ('E', 'B'), ('F', 'B'), ('G', 'R'), ('G', 'G'), ('C', 'G'), ('B', 'R'), ('A', 'G')])
+domains = args[0].varDomains
+success = (result == correct) and (domains['A'] == set(['R'])) and (domains['B'] == set(['G'])) and (domains['C'] == set(['R'])) and (domains['E'] == set(['G'])) and (domains['F'] == set(['R'])) and (domains['G'] == set(['B']))

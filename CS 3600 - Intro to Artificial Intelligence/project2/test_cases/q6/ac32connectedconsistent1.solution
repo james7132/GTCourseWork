@@ -1,0 +1,2 @@
+correct = {'A': set(['G']), 'B': set(['B']), 'C': set(['G']), 'D': set(['R']), 'E': set(['B']), 'F': set(['G']), 'G': set(['R'])}
+success = (result.varDomains == correct)

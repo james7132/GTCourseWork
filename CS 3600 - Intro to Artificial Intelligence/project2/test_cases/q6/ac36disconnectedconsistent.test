@@ -1,0 +1,4 @@
+AC3
+assignment csps/csp2A.assignment
+csp csps/csp2.csp
+hint Make sure that you begin with all constraints to account for disconnected subproblems

@@ -1,0 +1,6 @@
+forwardChecking
+assignment csps/csp7IB.assignment
+csp csps/csp7O.csp
+variable D
+value B
+hint Some values should be eliminated. If the answer appears correct and is not, make sure the assignment is updated with the inferences.

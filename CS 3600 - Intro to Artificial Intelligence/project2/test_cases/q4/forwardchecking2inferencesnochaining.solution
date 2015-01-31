@@ -1,0 +1,5 @@
+correct = set([('A', 'B'), ('B', 'B'), ('C', 'B'), ('E', 'B'), ('F', 'B')])
+domains = args[0].varDomains
+RGset = set(['R', 'G'])
+RGBset = set(['R', 'G', 'B'])
+success = (result == correct) and (domains['A'] == RGset) and (domains['B'] == RGset) and (domains['C'] == RGset) and (domains['E'] == RGset) and (domains['F'] == RGset) and (domains['G'] == RGBset)

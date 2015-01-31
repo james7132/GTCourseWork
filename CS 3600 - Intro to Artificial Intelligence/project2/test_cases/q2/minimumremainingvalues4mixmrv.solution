@@ -1,0 +1,2 @@
+correct = 'G'
+success = (result == correct)

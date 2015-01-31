@@ -1,0 +1,6 @@
+solve
+csp csps/csp7noc.csp
+function orderValues
+function chooseFirstVariable
+function noInferences
+boolean False

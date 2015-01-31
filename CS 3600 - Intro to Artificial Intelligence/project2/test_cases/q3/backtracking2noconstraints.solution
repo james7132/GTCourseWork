@@ -1,0 +1,11 @@
+correct = 'Any dictionary where every variable is assigned a value in its domain'
+if result is None:
+	success = False
+else:
+	if set(result.keys()) != set(['A', 'B', 'C', 'D', 'E', 'F', 'G']):
+		success = False
+	else:
+		success = True
+		for key in result:
+			if result[key] not in ['R', 'G', 'B']:
+				success = False

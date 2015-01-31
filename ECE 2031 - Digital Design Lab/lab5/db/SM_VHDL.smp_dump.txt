@@ -1,0 +1,6 @@
+
+State Machine - |SM_VHDL|state
+Name state.C state.B state.A 
+state.A 0 0 0 
+state.B 0 1 1 
+state.C 1 0 1 

@@ -1,0 +1,6 @@
+maintainArcConsistency
+assignment csps/csp7IA.assignment
+csp csps/csp7O.csp
+variable D
+value B
+hint There are no inferences to be made. If the answer appears correct and is not, make sure the assignment is unchanged.

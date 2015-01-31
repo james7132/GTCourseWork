@@ -1,0 +1,318 @@
+<html> 
+<head>
+<title> CS2200 Fall 2013 Homework 2 </title>
+</head>
+<body>
+ <img src="https://t-square.gatech.edu/access/content/group/d669adfb-313f-4859-807f-9e67dca91b97/Logos/tinylogo.jpg">
+  <h1>CS2200 Intro to Systems and Networks<br />
+  Homework 2<br />
+  Fall 2013</h1>
+<hr />
+<p>This assignment has four problems: </p>
+<ol>
+ <li><a href="#problem1">Datapath</a></li>
+ <li><a href="#problem2">Amdahl's Law</a></li>
+ <li><a href="#problem3">Interrupt Priority</a></li>
+ <li><a href="#problem4">Interrupt Handling</a></li>
+</ol>
+
+<p>You will turn in your modified hw2_answers.txt file by the deadline
+specified on Sakai. </p>
+<hr />
+
+<h2><a name=problem1></a>
+Datapath (20 points total)</h2>
+
+<p>In this problem we consider a potential enhancement for the
+LC2200-16 datapath. The &#8220;PCINC&#8221; enhancement adds a separate
+incrementer for the program. The original datapath and a datapath that illustrates the enhancement are shown below:</p>
+
+<p><b>Original LC2200-16 Datapath</b></p>
+
+<img src="lc2200datapath.png" alt="lc2200datapath" />
+
+<p><b>Datapath with the PCINC Enhancement</b></p>
+
+<img src="lc2200datapath-pcinc.png" alt="enhanced lc2200datapath" />
+
+<p><b>A. [16 points]</b>
+Give the states to control this datapath in order to execute the LC2200-16 
+ADDI instruction without the PCINC modification. Then do the same for a 
+datapath with the PCINC modification. Start with instruction fetch.</p>
+
+<p>Use this format and only list signals that are being asserted.</p>
+
+<p>State1: DrPC, LdMAR, LdA<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+GoTo next state
+&lt;--This may be a conditional expression and may be omitted if you want
+to just go to the following state.</p>
+
+<p><b>B. [2 points]</b>
+What is the CPI for ADDI with and without the PCINC enhancement?</p>
+
+<p><b>C. [2 points] </b>Assuming
+that the clock speed remains the same, what is the speedup for the ADDI
+instructions in the new datapath? Show your work. </p>
+
+<hr />
+
+<h2><a name=problem2>Problem 2:</a> Amdahl's Law (25 points total)</h2>
+
+<p><strong>A.</strong> <em>[15 points]</em> In the year 2020, both Intel and AMD
+decide to abandon their work on the x86, and instead develop processors based
+on the LC-2200-16 architecture. In order to build a faster processor than their
+competition, each manufacturer makes specific improvements to their
+implementation. </p>
+
+<ul>
+ <li>Intel's LC-2200-16 processor
+     features an additional hardware that offers an average speedup of 1.5x on
+     memory accesses (<code>lw</code> and <code>sw</code> operations).</li>
+ <li>AMD's LC-2200-16 processor
+     features better branch prediction, which gives its processor an average
+     speedup of 2x on <code>beq</code> operations. </li>
+</ul>
+<p>
+i. Using the chart below, calculate the speedup both gcc
+and spice on each manufacturer's processor.<br />
+ii. Which processor will execute gcc the fastest?<br />
+iii. Which processor will execute spice the fastest? </p>
+
+<table border="1">
+ <tr>
+  <td>
+  <p><b>Instruction class</b></p>
+  </td>
+  <td>
+  <p><b>LC-2200-16 examples</b></p>
+  </td>
+  <td>
+  <p><b>gcc</b></p>
+  </td>
+  <td>
+  <p><b>spice</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>Arithmetic</p>
+  </td>
+  <td>
+  <p><code>add, addi</code>
+  </p>
+  </td>
+  <td>
+  <p>43%</p>
+  </td>
+  <td>
+  <p>36%</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>Data transfer</p>
+  </td>
+  <td>
+  <p><code>lw, sw</code></p>
+  </td>
+  <td>
+  <p>22%</p>
+  </td>
+  <td>
+  <p>37%</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>Conditional branch</p>
+  </td>
+  <td>
+  <p><code>beq</code></p>
+  </td>
+  <td>
+  <p>33%</p>
+  </td>
+  <td>
+  <p>24%</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>Jump</p>
+  </td>
+  <td>
+  <p><code>jalr</code></p>
+  </td>
+  <td>
+  <p>2%</p>
+  </td>
+  <td>
+  <p>3%</p>
+  </td>
+ </tr>
+</table>
+
+<p><em>Note: You do not need to understand how the enhancements work for this question. Simply use the average speedups given for each.</em> </p>
+
+<p><strong>B.</strong> <em>[10 points]</em> The LC-2200-16 has no multiply
+instruction. Suppose we have the following two choices for performing
+multiplication: </p>
+
+<ul>
+ <li>Emulate multiplication in
+     software, using 15 instructions for each multiplication operation. </li>
+ <li>Add multiplication
+     hardware, which can perform multiplication in a single operation. </li>
+</ul>
+
+<p>What fraction of instructions must be multiplications in order to observe a
+3X overall speedup of the hardware solution over the software emulation
+solution? For simplicity, assume that all LC-2200-16 instructions take the same
+number of clock cycles. </p>
+
+<p><em>Hint: On this assignment and every other CS2200 homework, projects, and
+test, use your textbook's definition of speedup: execution time before
+improvement divided by execution time after improvement.</em></p>
+
+<hr>
+
+<h2><a name="problem3"></a>Problem 3: Interrupt Priority (31 points)</h2>
+
+<p>This question asks about the effect of interrupts on the
+execution time of a program. </p>
+
+<p>Suppose you have a computer system with multiple peripherals (DISK, SOUND,
+and CLOCK) and the peripherals generate interrupts at predictable rates: </p>
+
+<table align="center" border="1">
+ <tr>
+  <td> Name </td>
+  <td>Priority<br />
+  (0 is lowest) </td>
+  <td>Arrival rate</td>
+  <td>Execution time<br />
+  (CPU time)</td>
+ </tr>
+ <tr>
+  <td><em>background</em></td>
+  <td>0</td>
+  <td><em>n.a.</em></td>
+  <td>10 Seconds</td>
+ </tr>
+ <tr>
+  <td>SOUND</td>
+  <td>1</td>
+  <td>50/Second</td>
+  <td>6mS</td>
+ </tr>
+ <tr>
+  <td>DISK</td>
+  <td>2</td>
+  <td>10/Second</td>
+  <td>8mS</td>
+ </tr>
+ <tr>
+  <td>CLOCK</td>
+  <td>3</td>
+  <td>100/Second</td>
+  <td>2mS</td>
+ </tr>
+</table>
+
+<p>Assume the background task and all the interrupts initially fire at time 0
+and that the interrupts then arrive periodically thereafter. E.g. the sound
+card interrupt arrives at time 0, 20mS, 40mS, etc. </p>
+
+<p>Also note that the table lists arrival <b>rates</b></p>
+
+<p><strong>A.</strong> <em>[15 points]</em> Draw a timing chart showing which
+task (the background task or the handler for one of the interrupts) is
+operating over the first 50mS of time. The chart should cover the first 50mS in
+2mS intervals. E.g.: </p>
+
+<pre><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Task</pre><pre><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>----</pre><pre>Time<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>BG<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>DISK<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>SOUND<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>CLOCK</pre><pre>----<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>--<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>----<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>-----<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>-----</pre><pre><o:p>&nbsp;</o:p></pre><pre> 0mS:<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>CLOCK</pre><pre> 2mS:<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>DISK</pre><pre> 4mS:<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>DISK</pre><pre> 6mS:</pre><pre> 8mS:</pre><pre>10mS:</pre><pre>12mS:</pre><pre>14mS:</pre><pre>16mS:</pre><pre>18mS:</pre><pre>20mS:</pre><pre>22mS:</pre><pre>24mS:</pre><pre>26mS:</pre><pre>28mS:</pre><pre>30mS:</pre><pre>32mS:</pre><pre>34mS:</pre><pre>36mS:</pre><pre>38mS:</pre><pre>40mS:</pre><pre>42mS:</pre><pre>44mS:</pre><pre>46mS:</pre><pre>48mS:</pre><pre>50mS:</pre>
+
+<p><strong>B.</strong>
+<em>[10 points]</em> The background task requires 10 seconds of CPU time with
+no interrupts. However, the interrupt handlers require CPU time as well and
+will &quot;steal&quot; away some amount of time from the background task. How
+many seconds will it take to run the background task <em>with</em> the
+interrupt handlers running at the given rates? </p>
+
+<p>C.</strong>
+<em>[6 points]</em> Interrupts often come with a &quot;deadline&quot;, a
+specification of the maximum time from the time of the interrupt arrival to the
+time the handler *finishes* processing. </p>
+
+<p>For each interrupt (DISK, SOUND, CLOCK), give the worst-case time to finish
+processing the handler. </p>
+
+<hr />
+
+<h2><a name=problem4>Problem 4:</a> Interrupt Handling (24 points total)</h2>
+
+<p>For this section, we will introduce 3 &quot;new&quot; instructions that you may find useful: </p>
+
+<ul>
+ <li>EI (<strong>E</strong>nable <strong>I</strong>nterrupts)
+     </li>
+ <li>DI (<strong>D</strong>isable
+     <strong>I</strong>nterrupts) </li>
+ <li>RETI (<strong>RET</strong>urn
+     from <strong>I</strong>nterrupt) </li>
+</ul>
+
+<p><strong>A.</strong>
+<em>[2 points]</em> </p>
+
+<p>Distinguish between synchronous and asynchronous events, giving an example for each. </p>
+
+<p><strong>B.</strong>
+<em>[2 points]</em> </p>
+
+<p>What is the Interrupt Vector Table used for? What is the Exception/Trap Register used for?</p>
+
+<p><strong>C.</strong>
+<em>[2 points]</em> </p>
+
+<p>How does the processor find out what the address of the interrupt handler is upon encountering a program discontinuity?</p>
+
+<p><strong>D.</strong>
+<em>[8 points]</em> </p>
+
+<p>Below are the steps a typical interrupt handler will follow (assume interrupts are disabled upon entering the interrupt handler): </p>
+
+<ol>
+ <li>Save interrupted process state to stack. </li>
+ <li>Execute device-specific code.</li>
+ <li>Restore interrupted process state from stack. </li>
+ <li>Execute RETI to return. </li>
+</ol>
+
+<p>Sometimes,
+an interrupt handler will itself need to be interrupted. For this to happen,
+interrupts will need to be re-enabled during the execution of the handler.
+Modify the above list of steps as appropriate.</p>
+
+<p><strong>E.</strong>
+<em>[4 points]</em> </p>
+
+<p>Explain the difference between saving/restoring registers during a normal procedure call versus the way it is done upon an interrupt.</p>
+
+<p><strong>F.</strong>
+<em>[4 points]</em> </p>
+<p>Explain the need for a separate stack for interrupt handling on systems
+which distinguish between operating system code and user space code.</p>
+
+<p><strong>G.</strong>
+<em>[2 points]</em> </p>
+
+<p>When
+an interrupt handler returns, it executes a special RETI instruction. This
+instruction is the atomic equivalent of what two other instructions? </p>
+
+<hr />
+<p><em>End of CS 2200 Fall 2013 Homework 2</em> </p>
+</body>
+</html>

@@ -1,0 +1,6 @@
+forwardChecking
+assignment csps/csp7IF.assignment
+csp csps/csp7O.csp
+variable D
+value B
+hint Make sure you are implmenting forward checking and not MAC. Should have inferences and a changed assignment.

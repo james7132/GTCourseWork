@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ABAGAIL:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ABAGAIL_jar</output-path>
+    <root id="archive" name="ABAGAIL.jar">
+      <element id="module-output" name="ABAGAIL" />
+    </root>
+  </artifact>
+</component>

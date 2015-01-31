@@ -1,0 +1,325 @@
+=== Run information ===
+
+Scheme:weka.clusterers.EM -I 100 -N 2 -M 1.0E-6 -S 100
+Relation:     spambase
+Instances:    4601
+Attributes:   58
+              word_freq_make
+              word_freq_address
+              word_freq_all
+              word_freq_3d
+              word_freq_our
+              word_freq_over
+              word_freq_remove
+              word_freq_internet
+              word_freq_order
+              word_freq_mail
+              word_freq_receive
+              word_freq_will
+              word_freq_people
+              word_freq_report
+              word_freq_addresses
+              word_freq_free
+              word_freq_business
+              word_freq_email
+              word_freq_you
+              word_freq_credit
+              word_freq_your
+              word_freq_font
+              word_freq_000
+              word_freq_money
+              word_freq_hp
+              word_freq_hpl
+              word_freq_george
+              word_freq_650
+              word_freq_lab
+              word_freq_labs
+              word_freq_telnet
+              word_freq_857
+              word_freq_data
+              word_freq_415
+              word_freq_85
+              word_freq_technology
+              word_freq_1999
+              word_freq_parts
+              word_freq_pm
+              word_freq_direct
+              word_freq_cs
+              word_freq_meeting
+              word_freq_original
+              word_freq_project
+              word_freq_re
+              word_freq_edu
+              word_freq_table
+              word_freq_conference
+              char_freq_;
+              char_freq_(
+              char_freq_[
+              char_freq_!
+              char_freq_$
+              char_freq_#
+              capital_run_length_average
+              capital_run_length_longest
+              capital_run_length_total
+              Class
+Test mode:evaluate on training data
+
+=== Model and evaluation on training set ===
+
+
+EM
+==
+
+Number of clusters: 2
+
+
+                               Cluster
+Attribute                            0         1
+                                (0.53)    (0.47)
+=================================================
+word_freq_make
+  mean                           0.1451    0.0593
+  std. dev.                      0.3593    0.2219
+
+word_freq_address
+  mean                            0.136    0.2991
+  std. dev.                       0.329    1.8412
+
+word_freq_all
+  mean                           0.3678    0.1833
+  std. dev.                      0.5295    0.4548
+
+word_freq_3d
+  mean                           0.1239    0.0001
+  std. dev.                      1.9186    0.0044
+
+word_freq_our
+  mean                           0.4168    0.1954
+  std. dev.                      0.7249    0.5869
+
+word_freq_over
+  mean                           0.1439    0.0423
+  std. dev.                      0.3185    0.1998
+
+word_freq_remove
+  mean                            0.207    0.0106
+  std. dev.                      0.5142    0.0928
+
+word_freq_internet
+  mean                           0.1658    0.0377
+  std. dev.                      0.5066    0.2125
+
+word_freq_order
+  mean                           0.1311    0.0443
+  std. dev.                      0.3362    0.1847
+
+word_freq_mail
+  mean                           0.3075    0.1633
+  std. dev.                      0.7568    0.4788
+
+word_freq_receive
+  mean                            0.102    0.0127
+  std. dev.                      0.2599    0.0793
+
+word_freq_will
+  mean                           0.5521    0.5301
+  std. dev.                      0.8176    0.9081
+
+word_freq_people
+  mean                           0.1305    0.0531
+  std. dev.                      0.3387     0.246
+
+word_freq_report
+  mean                           0.0794    0.0354
+  std. dev.                       0.396    0.2483
+
+word_freq_addresses
+  mean                           0.0844    0.0099
+  std. dev.                      0.3401    0.0984
+
+word_freq_free
+  mean                           0.4028    0.0769
+  std. dev.                      0.9205     0.664
+
+word_freq_business
+  mean                           0.2202    0.0559
+  std. dev.                      0.5634    0.2204
+
+word_freq_email
+  mean                           0.2725    0.0868
+  std. dev.                      0.6339    0.3606
+
+word_freq_you
+  mean                           2.1791    1.0847
+  std. dev.                      1.7663    1.5986
+
+word_freq_credit
+  mean                           0.1535    0.0097
+  std. dev.                      0.6876    0.1049
+
+word_freq_your
+  mean                           1.1985    0.3756
+  std. dev.                      1.3406     0.829
+
+word_freq_font
+  mean                             0.18    0.0555
+  std. dev.                       1.251    0.6862
+
+word_freq_000
+  mean                           0.1872    0.0061
+  std. dev.                      0.4641    0.0425
+
+word_freq_money
+  mean                           0.1693    0.0105
+  std. dev.                      0.5929    0.0931
+
+word_freq_hp
+  mean                           0.0181     1.143
+  std. dev.                      0.1101    2.2871
+
+word_freq_hpl
+  mean                           0.0068    0.5542
+  std. dev.                       0.068    1.2254
+
+word_freq_george
+  mean                            0.003     1.621
+  std. dev.                      0.0399    4.7555
+
+word_freq_650
+  mean                           0.0028    0.2611
+  std. dev.                      0.0459    0.7592
+
+word_freq_lab
+  mean                                0    0.2094
+  std. dev.                      0.5933    0.8497
+
+word_freq_labs
+  mean                           0.0007     0.217
+  std. dev.                      0.0141    0.6454
+
+word_freq_telnet
+  mean                           0.0013    0.1356
+  std. dev.                      0.0217    0.5782
+
+word_freq_857
+  mean                                0    0.0996
+  std. dev.                      0.3286    0.4725
+
+word_freq_data
+  mean                           0.0072    0.1978
+  std. dev.                      0.0504     0.795
+
+word_freq_415
+  mean                           0.0006    0.1006
+  std. dev.                      0.0116    0.4736
+
+word_freq_85
+  mean                           0.0046     0.218
+  std. dev.                      0.0372    0.7576
+
+word_freq_technology
+  mean                           0.0202    0.1838
+  std. dev.                      0.1172      0.56
+
+word_freq_1999
+  mean                           0.0383    0.2471
+  std. dev.                      0.1836    0.5647
+
+word_freq_parts
+  mean                           0.0033    0.0242
+  std. dev.                      0.0432    0.3174
+
+word_freq_pm
+  mean                           0.0072    0.1584
+  std. dev.                      0.0587    0.6197
+
+word_freq_direct
+  mean                            0.026    0.1082
+  std. dev.                      0.1251     0.488
+
+word_freq_cs
+  mean                           0.0026    0.0895
+  std. dev.                      0.0407    0.5199
+
+word_freq_meeting
+  mean                           0.0002    0.2799
+  std. dev.                      0.0052    1.0969
+
+word_freq_original
+  mean                           0.0055    0.0914
+  std. dev.                      0.0348    0.3174
+
+word_freq_project
+  mean                           0.0017    0.1657
+  std. dev.                      0.0167    0.8968
+
+word_freq_re
+  mean                           0.1751     0.442
+  std. dev.                      0.4526    1.3783
+
+word_freq_edu
+  mean                           0.0242    0.3536
+  std. dev.                      0.1219    1.2973
+
+word_freq_table
+  mean                           0.0001    0.0114
+  std. dev.                      0.0022    0.1106
+
+word_freq_conference
+  mean                            0.001    0.0664
+  std. dev.                      0.0186    0.4125
+
+char_freq_;
+  mean                           0.0181    0.0615
+  std. dev.                      0.0834    0.3416
+
+char_freq_(
+  mean                           0.1103    0.1711
+  std. dev.                      0.2902    0.2422
+
+char_freq_[
+  mean                            0.007    0.0281
+  std. dev.                       0.042    0.1521
+
+char_freq_!
+  mean                           0.4177     0.103
+  std. dev.                       0.729     0.873
+
+char_freq_$
+  mean                           0.1333    0.0116
+  std. dev.                      0.3234     0.058
+
+char_freq_#
+  mean                           0.0584    0.0284
+  std. dev.                      0.5282    0.2794
+
+capital_run_length_average
+  mean                           7.6986    2.3914
+  std. dev.                     43.4909    1.8251
+
+capital_run_length_longest
+  mean                          81.6568   19.2428
+  std. dev.                     263.658   26.2936
+
+capital_run_length_total
+  mean                         373.3655   182.685
+  std. dev.                    755.2459  349.0998
+
+Class
+  1                           1702.7145  112.2855
+  0                            726.8033 2063.1967
+  [total]                     2429.5178 2175.4822
+
+
+Time taken to build model (full training data) : 2.08 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0      2404 ( 52%)
+1      2197 ( 48%)
+
+
+Log likelihood: -19.75907
+

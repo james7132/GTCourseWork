@@ -1,0 +1,19 @@
+|SM_VHDL
+X[0] => Mux0.IN5
+X[0] => Mux1.IN5
+X[0] => Mux2.IN5
+X[0] => Mux3.IN5
+X[0] => Selector0.IN2
+X[1] => Mux0.IN4
+X[1] => Mux1.IN4
+X[1] => Mux2.IN4
+X[1] => Mux3.IN4
+X[1] => Selector2.IN1
+X[1] => Selector1.IN1
+RESETN => state~9.DATAIN
+CLOCK => state~5.DATAIN
+Z <= Z~0.DB_MAX_OUTPUT_PORT_TYPE
+Q[0] <= Q~1.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

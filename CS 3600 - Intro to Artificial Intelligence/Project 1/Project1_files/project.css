@@ -1,0 +1,36 @@
+body {
+    font: 14px verdana,helvetica,arial,sans-serif;
+    color: #333;
+}
+
+h2,h3,h4,h5 {
+    color: #325B9D;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 140%;
+    line-height: 90%
+    margin-top: 30px;
+}
+
+h4 {
+    font-size: 120%;
+    margin: 20px 0 10px 0;
+}
+
+h5 {
+    font-size: 90%;
+}
+
+p {
+    line-height: 140%;
+}
+
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}

@@ -1,0 +1,2 @@
+correct = True
+success = result and (args[0].assignedValues['D'] is None)

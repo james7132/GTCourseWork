@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>CS 2200 Fall 2013 Project 1</title>
+</head>
+<body>
+<h1>CS 2200 Intro to Systems and Networks<br />
+Project 1<br />
+Fall 2013 </h1>
+<hr />
+
+<div id="requirements">
+<h4>Project Requirements</h4>
+<ul>
+	<li>Virtualbox VM available to download on T-Square</li>
+  <li><b>OR</b> 32-bit Ubuntu or Debian installation. Download vanilla install of Ubuntu here <a href="http://www.ubuntu.com/start-download?distro=desktop&bits=32&release=lts">here</a>
+  <li>Build-essential package. If you used the custom VirtualBox image then you already have this. If not, then open the command line in your Ubuntu/Debian installation and run the following command: <code>sudo apt-get install build-essential</code></li>
+  <li>Logisim. Be sure you are using the most updated version (this means do NOT use BrandonSim from CS2110). Download <a href="http://sourceforge.net/projects/circuit/">here</a>.(already included in custom VM)</li>
+</ul>
+</div>
+<hr />
+
+<div id="overview">
+<h4>Project Overview and Description</h4>
+<p>Project 1 is designed to give you a good feel for exactly how a processor works. In Phase I, you will design a datapath in Logisim to implement a supplied instruction set architecture. You will use the datapath as a tool to determine the control signals needed to execute each instruction. In Phases II and III you are required to build a simple finite state machine (AKA control-unit) to control your computer and actually run programs on it.<br /><br /> 
+
+<b>Note:</b> You will need to have a working knowledge of Logisim. Make sure that you know how to make basic circuits as well as subcircuits before proceeding. Always remember to see the TAs if you need help.</p>
+</div>
+
+<hr />
+
+<div id="phase1">
+<h4>Phase 1 - Datapath Implementation</h4>
+In this phase of the project, you must first learn the instruction set architecture (ISA) of the processor we will be implementing. After, you will implement a complete LC-2200-16 datapath in Logisim using what you have learned.
+
+<h5>You Must:</h5>
+<ol>
+  <li>Learn and understand the LC-2200-16 ISA. Simply read and understand this <a href="resources/LC-2200-16_ISA_manual.html">manual</a>. <b>Do NOT move on until you have fully read and understood the ISA as it will be impossible to implement the datapath if you do not.</b></li>
+  <li>Using Logisim, implement the LC-2200-16 datapath. The basic operation of the datapath will be discussed in class. As you build the datapath, you should consider adding in additional functionality that will allow you to operate the whole datapath "by hand" so that you can test individual operations. We suggest your datapath might include devices to allow you to arbitrarily put a value on the bus as well as view the current value of the bus. Feel free to add any additional bells and whistles (maybe LEDs would be better) that you desire to help you understand what is going on.<br /><br />
+  
+The below image represents a simple schematic of the datapath that you are to implement. The "control logic" component referenced in the image will be implemented in Phase 2 and 3 of the project.</li>
+</ol>
+<img align="middle" src="resources/images/lc2200datapath.png"></img>
+
+<h5>Tips:</h5>
+<ul>
+  <li>You will have to build your own ALU. Recall that it must support A + B, A nand B, A-B and A+1.</li>
+  <li>Logisim has single registers but doesn't have a register file. You can choose to either use a block of RAM to act as your register file or you can build your own. <b>Remember that, in either case, you must make R0 ($zero) a zero register (i.e. no matter what attempt to load into that register, it should ALWAYS output "0").</b></li>
+  <li>To load programs onto the implemented datapath, you must use the provided Assembler to convert your program from assembly to raw bytecode (hex). The raw hex can then be loaded into the memory component. For more information on how to assemble, please see the README contained in the "Assembler" folder. <b>Note:</b> Although programs can be loaded into the datapath, you will have to run them "by hand" to test the datapath since the control unit is not finished until Phase 2 and 3.</li>
+</ul>
+
+</div>
+<hr />
+
+
+<div id="phase2">
+<h4>Phase 2 - Microcontrol Unit Implementation</h4>
+In this phase of the project, you will use Logisim to implement the microcontrol unit of the LC-2200-16. This component is referred to as "Control Logic" in the images/schematics. The microcontrol unit will control all of the signal lines to the various parts of the datapath.
+
+<h5>You Must:</h5>
+<ol>
+<li>Read and understand the microcontrol unit logic
+  <ul>
+    <li><a href="resources/microcontrol.html">Microcontrol Unit Details and Schematics</a></li>
+    <li><b>Note:</b> You will be required to write the microcode for the microcontrol unit that you implement in Phase 3 so please read the README file in the microcontrol unit folder for more details.</li>
+  </ul>
+</li>
+<li>Implement the microcontrol unit using Logisim. The above link contains all of the necessary information. Take note that the input and output signals on the schematics directly match the signals marked in the LC-2200-16 datapath schematic above.</li>
+</ol>
+</div>
+
+<hr />
+
+<div id="phase3">
+<h4>Phase 3 - Microcode and Testing</h4>
+In this final stage of the project, you will write the microcode control program that will be loaded into the microcontrol unit you implemented in Phase 2. Then, you will hook up the control unit you built in Phase 2 of the project to the datapath you implemented in Phase 1. Finally, you will test your completed computer using a simple test program and ensure that it properly executes.
+
+<h5>You Must:</h5>
+<ol>
+  <li>Write the microcode control program for the microcontrol unit from Phase 2. Please see the README file located in the microcontrol folder for more information and instructions on how to implement the microcode.</li>
+  <li>After the microcode has been written, use the provided tools to convert it to raw hex. This should then be loaded into your implemented Microcontrol unit's memory component. The tools to convert the microcode to hex can be found in the microcontroller folder</li>
+  <li>Now, connect the completed control unit to the datapath you implemented in Phase 1. Using the provided schematics from Phase 1 and 2, this should be trivial as all signal names should match up.</li>
+  <li>Finally, it is time to test your completed computer. Use the provided Assembler (found in the "Assembler" folder) to convert a test program from assembly to hex (see the README for help). We recommend using test programs that contain a single instruction since you are bound to find a few bugs at this stage of the project.</li>
+</ol>
+</div>
+
+<hr />
+
+<div id="turnin">
+<h4>What to Submit</h4>
+Please submit all the necessary files in a compressed archive (zip or tar is fine).
+
+<h5>You Must Submit:</h5>
+<ul>
+  <li>Datapath logisim file</li>
+  <li>Microcontrol Unit logisim file (unneeded if you implemented this in the same file as the datapath)</li>
+  <li>Microcode (&lt;filename&gt;.xml, <b>NOT the hex files</b>)</li>
+</ul>
+<b>Don't forget to sign up for a demo slot! We will announce when these are made available. Failure to demo results in an automatic 0.</b><br /><br />
+
+You should always redownload your assignment from t-square after submitting to ensure that all necessary files were properly uploaded.
+</div>
+<hr />
+<i>As always, please contact the TAs if you have any questions.</i>
+</body>
+<html>

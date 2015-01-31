@@ -1,0 +1,6 @@
+solve
+csp csps/csp7noc.csp
+function leastConstrainingValuesHeuristic
+function minimumRemainingValuesHeuristic
+function maintainArcConsistency
+boolean True

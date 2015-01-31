@@ -1,0 +1,427 @@
+<html>
+<head>
+<title>CS2200 - ISA Manual</title>
+</head>
+<body>
+<h1>The LC-2200 Instruction-Set Architecture</h1>
+<h3>CS2200 - Intro to Systems and Networks</h3>
+
+<p>The LC-2200-16 (Little Computer 2200-16 bits) is very simple,
+but it is general enough to solve complex problems. (Note: This is
+a 16-bit version of the ISA specification you will find in the
+Ramachandran &amp; Leahy textbook for CS 2200.)&nbsp; This section
+describes the instruction set and instruction format of the
+LC-2200. The LC-2200-16 is a 16-register, 16-bit computer. All
+addresses are word-addresses. </p>
+
+<p>Although, the 16 registers are known as general purpose they are
+generally assigned special duties by software convention. </p>
+
+<table border="1" cellpadding="0">
+<tr>
+<td>
+<p><b>Reg</b><b>#</b></p>
+</td>
+<td>
+<p><b>Name</b></p>
+</td>
+<td>
+<p><b>Use</b></p>
+</td>
+<td>
+<p><b>Callee</b> <b>Save?</b></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>0</p>
+</td>
+<td>
+<p>$zero</p>
+</td>
+<td>
+<p>always zero (by hardware)</p>
+</td>
+<td>
+<p>n.a.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>1</p>
+</td>
+<td>
+<p>$at</p>
+</td>
+<td>
+<p>reserved for assembler</p>
+</td>
+<td>
+<p>n.a.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>2</p>
+</td>
+<td>
+<p>$v0</p>
+</td>
+<td>
+<p>return value</p>
+</td>
+<td>
+<p>no</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>3</p>
+</td>
+<td>
+<p>$a0</p>
+</td>
+<td>
+<p>argument</p>
+</td>
+<td>
+<p>no</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>4</p>
+</td>
+<td>
+<p>$a1</p>
+</td>
+<td>
+<p>argument</p>
+</td>
+<td>
+<p>no</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>5</p>
+</td>
+<td>
+<p>$a2</p>
+</td>
+<td>
+<p>argument</p>
+</td>
+<td>
+<p>no</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>6</p>
+</td>
+<td>
+<p>$t0</p>
+</td>
+<td>
+<p>temporary</p>
+</td>
+<td>
+<p>no</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>7</p>
+</td>
+<td>
+<p>$t1</p>
+</td>
+<td>
+<p>temporary</p>
+</td>
+<td>
+<p>no</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>8</p>
+</td>
+<td>
+<p>$t2</p>
+</td>
+<td>
+<p>temporary</p>
+</td>
+<td>
+<p>no</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>9</p>
+</td>
+<td>
+<p>$s0</p>
+</td>
+<td>
+<p>saved register</p>
+</td>
+<td>
+<p>YES</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>10</p>
+</td>
+<td>
+<p>$s1</p>
+</td>
+<td>
+<p>saved register</p>
+</td>
+<td>
+<p>YES</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>11</p>
+</td>
+<td>
+<p>$s2</p>
+</td>
+<td>
+<p>saved register</p>
+</td>
+<td>
+<p>YES</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>12</p>
+</td>
+<td>
+<p>$k0</p>
+</td>
+<td>
+<p>reserved for OS/traps</p>
+</td>
+<td>
+<p>n.a.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>13</p>
+</td>
+<td>
+<p>$sp</p>
+</td>
+<td>
+<p>stack pointer</p>
+</td>
+<td>
+<p>no</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>14</p>
+</td>
+<td>
+<p>$fp</p>
+</td>
+<td>
+<p>Frame pointer</p>
+</td>
+<td>
+<p>YES</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>15</p>
+</td>
+<td>
+<p>$ra</p>
+</td>
+<td>
+<p>return address</p>
+</td>
+<td>
+<p>no</p>
+</td>
+</tr>
+</table>
+
+<p>Register 0: This register will always contain zero when read
+from. As an additional feature it may be written to in those cases
+where a value is not needed.</p>
+<blockquote>
+<p><b>Note:</b> For the purposes of this project, you must implement
+the zero register. Regardless of what is written to this register,
+it should always output zero.</p>
+</blockquote>
+<p>Register 1: Although this is a general purpose register by
+convention, programmers should not use it. It may be used by the
+assembler when processing pseudo-instructions. </p>
+<p>Register 2: Is designated as the register used to return
+values from functions. </p>
+<p>Registers 3-5: Are designated to be used for passing
+arguments to functions.</p>
+<p>Registers 6-8: Are designated for temporary variables.
+</p>
+<blockquote>
+<p><b>Note:</b> When calling a function the programmer should assume
+that the contents of registers 2-8 that were present when the call
+was made will no longer be valid. Thus, if needed after the call
+those values should be saved by the programmer calling the
+function. </p>
+</blockquote>
+<p>Registers 9-11: These are saved registers.The caller
+of a function may assume that once the function returns the values
+that were in these registers before the call will still be there.
+</p>
+<blockquote>
+<p><b>Note:</b> This implies that a programmer writing a function that
+wishes to use these registers should first save them (most likely
+on the activation stack), then use them and then restore them
+before returning control to the caller </p>
+</blockquote>
+<p>Register 12: This register is reserved for handling
+interrupts. </p>
+<p>Register 13: The stack pointer which is used to keep track of
+the location of the top of the activation stack. </p>
+<p>Register 14: This is the frame pointer discussed in the class
+and covered in the textbook. You can ignore it for this project.
+</p>
+<p>Register 15: When a function is called the JALR instruction
+will save the address to return to and by convention this register
+is used for that purpose. </p>
+<h4>Instructions </h4>
+<p>There are 4 instruction formats (bit 0 is the least-
+significant bit). </p>
+<pre>
+R-type instructions (add, nand):
+
+bits 15-13: opcode
+bits 12-9: RX
+bits 8-5: RY
+bit 4: unused
+bits 3-0: RZ
+</pre>
+<br/>
+<pre>
+I-type instructions (addi, lw, sw, beq):
+
+bits 15-13: opcode
+bits 12-9: RX
+bits 8-5: RY
+bits 4-0: offsetField (a 5-bit, 2's complement number with a range of -16 to +15)
+</pre>
+<br/>
+<pre>
+J-type instructions (jalr):
+
+bits 15-13: opcode
+bits 12-9: RX
+bits 8-5: RY
+bits 4-0: unused (should all be 0)
+</pre>
+<br/>
+<pre>
+S-type instructions (halt):
+
+bits 15-13: opcode
+bits 12-0: unused (should all be 0)
+</pre>
+<p>Symbolic instructions should follow the same layout. For
+example, the add instruction is written in assembly as:<br></b>
+<code>add</b></code>&lt;RX&gt;&lt;RY&gt;&lt;RZ&gt;</b></p>
+
+<pre>------------------------------------------------------------------
+Table 1: Description of Machine Instructions
+------------------------------------------------------------------
+Assembly language
+Opcode (binary name for instruction)        Action
+(bits 15-13)
+------------------------------------------------------------------
+add (R-type format)  000
+Add contents of RY with contents of RZ, store results in RX.
+format: add RX, RY, RZ
+ex: add $v0, $a0, $a1
+ 
+nand (R-type format) 001
+Nand contents of RY with contents of RZ, store results in RX.
+format: nand RX, RY, RZ
+ex: nand $v0, $a0, $a1
+ 
+addi (I-type format) 010
+Add contents of RY to contents of offset field and store result in RX.
+format: addi RX, RY, offsetField
+ex: addi $v0, $a0, 25
+ 
+lw (I-type format)  011
+Retrieves data from memory location [RY+offsetField] and loads that data into RX.
+format: lw RX, offsetField(RY)
+ex: lw $v0, 0x42($sp)
+ 
+sw (I-type format) 100
+Retrieves data from RX and stores that data in memory location [RY+offsetField]
+format: sw RX, offsetField(RY)
+ex: sw $a0, 0x42($sp)
+ 
+beq (I-type format) 101
+Compare the contents of RX  and RY; if they are the same, then branch to
+the address PC+1+offsetField, where PC is the address
+of the beq instruction.
+format: beq RX, RY, offsetField
+ex: beq $a0, $a1, done
+ 
+jalr (J-type format) 110
+First store PC+1 into RY where PC is the address of the jalr instruction.
+Then branch to the address now contained in RX. Note that if RX is the
+same as RY, the processor will first store PC+1 into that register,
+then end up branching to PC+1.
+format: jalr RX, RY
+ex: jalr $at, $ra
+ 
+halt (S-type format)  111
+Halts the processor.
+ex: halt</pre> 
+ 
+<p>Like many processors an
+assembler for the LC-2200-16 would supply a number of pseudo instructions: </p> 
+<pre>noop - No operation: does nothing
+ex: noop (actually emits add $zero, $zero, $zero)
+ 
+.byte (pseudo-op) - fill word with a value.
+ex: .byte  32</pre> 
+ 
+<p>The assembler supports labels which represent the address of the line.
+If a label is used in a beq instruction, it will evaluate to the
+relative offset. </p> 
+ 
+<pre>Example:
+(address 0):       add  $s0, $zero, $zero
+(address 1): loop: addi $s0, $s0, -1
+(address 2):       beq  $s0, $zero, end
+(address 3):       beq  $zero, $zero, loop
+(address 4): end:  halt
+ 
+becomes
+ 
+(address 0): 000 1001 0000 0000 0 or  0x1200
+(address 1): 010 1001 1001 11111  or  0x533F
+(address 2): 101 1001 0000 00001  or  0xB201
+(address 3): 101 0000 0000 11101  or  0xA01D
+(address 4): 111 00000000000 00   or  oxE000
+</pre> 
+
+<a href="../instructions.html">Back to Instructions</a>
+</body>
+</html>

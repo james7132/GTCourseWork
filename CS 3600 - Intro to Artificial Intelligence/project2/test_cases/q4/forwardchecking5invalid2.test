@@ -1,0 +1,6 @@
+forwardChecking
+assignment csps/csp7IE.assignment
+csp csps/csp7O.csp
+variable D
+value B
+hint There are invalid inferences, make sure you remove any changes to the assignment before returning None

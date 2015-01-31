@@ -1,0 +1,139 @@
+<html>
+<head>
+<title>CS2200 - Microcontrol Unit</title>
+</head>
+<body>
+<h1> Microcontrol Unit</h1>
+<h3>CS2200 - Intro Systems and Networks</h3>
+
+<p>You will make a Microcontrol Unit which will drive control of
+the signal lines to the various items on the datapath.</p>
+
+<p>FSM control units may be implemented in a number of ways:
+Combinational logic combined with a state element such as a
+register may be used. Quite common in practice are microcode
+designs where the information for each state is stored in a ROM.
+</p>
+
+<p>As mentioned above, the simple, single-ROM solution has a lot
+of wasted space in the ROM since most of the microstates do not
+depend on the OP code or the Z register to determine which signals
+to assert. For example, since Z register is an input for the
+address, every microstate would have to have an address for Z = 0
+as well as Z = 1, even though this only matters for one particular
+microstate. </p>
+
+<p>To solve this problem, we will use a three ROM
+microcontroller. In this arrangement, we have three ROMs - the main
+ROM, which outputs the control signals, the sequencer ROM, which
+helps to determine which microstate to go at the end of the FETCH
+state, and the OnZ ROM, which helps to determine whether or not to
+branch during the BEQ instruction. See the following figure.
+</p>
+
+
+<h4><br>
+<img border="0" width="716" height="631" id="_x0000_i1030" src=
+"images/three_rom_controller.png"></h4>
+
+<p><b>Figure 3: Three ROM Microcontrol Unit</b></p>
+
+<p>As you can see, there are three different locations that the
+next state can come from - part of the output from the previous
+state (main ROM), the sequencer ROM, and the OnZ ROM. The mux
+controls which of these sources gets through to the state register.
+If the previous state's "next state" field determines where to go,
+neither the OPTest nor chkZ signals will be asserted. If the Op
+Code from the IR determines the next state (such as at the end of
+the Fetch state), the OpTest signal will be asserted. If the
+zero-detection circuitry determines the next state (such as in the
+BEQ instruction), the TestZ signal will be asserted. Note that
+these two signals should never be asserted at the same
+time since nothing is input into the "11" pin on the MUX.</p>
+
+<p>The OpCheck ROM should have one address per
+instruction, and the OnZ ROM should have one address for taking the
+branch and one for not taking the branch. </p>
+
+<p><b>NOTE:</b> Logisim has a minimum of two address bits for a ROM (i.e. four addresses),
+even though only one address bit (two addresses) is needed for the OnZ ROM. Just
+ignore the other two addresses. You may want to do something so
+that the high address bit for this ROM is permanently set to zero.
+</p>
+
+<p>Before getting down to specifics you need to determine the
+control scheme for the datapath. To do this examine each
+instruction, one by one, and construct a finite state bubble
+diagram showing exactly what control signals will be set in each
+state. Also determine what are the conditions necessary to pass
+from one state to the next. Experiment with the supplied datapath
+to make sure that your logic is sound. </p>
+
+<p>Once the finite state bubble diagram is produced, the next
+step is to encode the contents of the Control Unit ROM with a tool
+we are providing. Then you must design and build (in Logisim)
+the Control Unit circuit which will contain the three ROMs, a MUX,
+and a state register. Your design will be better if it allows you
+to single step and insure that it is working properly. Finally, you
+will load the Control Unit's ROMs with the output of the tool.
+</p>
+
+<p>Here is a table defining the bits you should use for your
+control logic: </p>
+
+<pre>
+Input Address to State Machine ROM
+Bit
+0 lower bit State
+1
+2
+3
+4
+5 higher bit state
+
+
+State Machine ROM Contents
+Bit
+0 lower bit State
+1
+2
+3
+4
+5  higher bit State
+6 DrREG
+7 DrMEM
+8 DrALU
+9 DrPC
+10 DrOFF
+11 LdPC
+12 LdIR
+13 LdMAR
+14 LdA
+15 LdB
+16 LdZ
+17 WrREG
+18 WrMEM
+19 RegSelLo
+20 RegSelHi
+21 ALULo
+22 ALUHi
+23 OPTest
+24 chkZ
+
+RegSelHi
+RegSelLo Select Register Field
+0 0 RX
+0 1 RY
+1 0 RZ
+1 1 Unused
+
+ALUHi
+ALULo ALU Function
+0 0 ADD
+0 1 NAND
+1 0 A-B
+1 1 A+1</pre>
+
+<a href="../instructions.html">Back to Instructions</a>
+</body>
+</html>

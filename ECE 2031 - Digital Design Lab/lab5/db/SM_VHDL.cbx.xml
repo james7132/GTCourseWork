@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="SM_VHDL">
+		<CBX_INST_ENTRY INSTANCE_NAME="|SM_VHDL|lpm_mux:Mux0" CBX_FILE_NAME="mux_umc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SM_VHDL|lpm_mux:Mux1" CBX_FILE_NAME="mux_umc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SM_VHDL|lpm_mux:Mux2" CBX_FILE_NAME="mux_umc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SM_VHDL|lpm_mux:Mux3" CBX_FILE_NAME="mux_umc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

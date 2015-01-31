@@ -1,0 +1,3 @@
+correct = ['A', 'B']
+result.sort()
+success = (result == correct)

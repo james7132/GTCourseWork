@@ -1,0 +1,6 @@
+recursiveBacktracking
+assignment csps/sudoku1.assignment
+csp csps/sudoku.csp
+function leastConstrainingValuesHeuristic
+function minimumRemainingValuesHeuristic
+function maintainArcConsistency

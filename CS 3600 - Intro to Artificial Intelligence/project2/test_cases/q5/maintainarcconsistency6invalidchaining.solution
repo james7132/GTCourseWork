@@ -1,0 +1,4 @@
+correct = None
+domains = args[0].varDomains
+RGBset = set(['R', 'G', 'B'])
+success = (result == correct) and (domains['A'] == RGBset) and (domains['B'] == RGBset) and (domains['C'] == RGBset) and (domains['E'] == set(['B', 'G'])) and (domains['F'] == set(['R', 'B'])) and (domains['G'] == set(['R', 'G']))
